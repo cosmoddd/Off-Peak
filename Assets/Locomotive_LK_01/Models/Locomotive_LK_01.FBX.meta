@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: 238d9ac606d326e49a587d77c310ad95
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: component_0
+    100002: component_1
+    100004: component_2
+    100006: component_4
+    100008: component_5
+    100010: component_6
+    100012: component_7
+    100014: lk_01_tender
+    100016: //RootNode
+    100018: wheel_0
+    100020: wheel_1
+    100022: wheel_2
+    100024: wheel_3
+    100026: wheel_4
+    100028: wheel_5
+    100030: wheel_6
+    100032: wheel_7
+    100034: wheel_8
+    100036: wheel_9
+    400000: component_0
+    400002: component_1
+    400004: component_2
+    400006: component_4
+    400008: component_5
+    400010: component_6
+    400012: component_7
+    400014: lk_01_tender
+    400016: //RootNode
+    400018: wheel_0
+    400020: wheel_1
+    400022: wheel_2
+    400024: wheel_3
+    400026: wheel_4
+    400028: wheel_5
+    400030: wheel_6
+    400032: wheel_7
+    400034: wheel_8
+    400036: wheel_9
+    2300000: component_0
+    2300002: component_1
+    2300004: component_2
+    2300006: component_4
+    2300008: component_5
+    2300010: component_6
+    2300012: component_7
+    2300014: lk_01_tender
+    2300016: //RootNode
+    2300018: wheel_0
+    2300020: wheel_1
+    2300022: wheel_2
+    2300024: wheel_3
+    2300026: wheel_4
+    2300028: wheel_5
+    2300030: wheel_6
+    2300032: wheel_7
+    2300034: wheel_8
+    2300036: wheel_9
+    3300000: component_0
+    3300002: component_1
+    3300004: component_2
+    3300006: component_4
+    3300008: component_5
+    3300010: component_6
+    3300012: component_7
+    3300014: lk_01_tender
+    3300016: //RootNode
+    3300018: wheel_0
+    3300020: wheel_1
+    3300022: wheel_2
+    3300024: wheel_3
+    3300026: wheel_4
+    3300028: wheel_5
+    3300030: wheel_6
+    3300032: wheel_7
+    3300034: wheel_8
+    3300036: wheel_9
+    4300000: lk_01
+    4300002: wheel_0
+    4300004: wheel_1
+    4300006: wheel_2
+    4300008: wheel_3
+    4300010: wheel_4
+    4300012: wheel_5
+    4300014: component_0
+    4300016: component_1
+    4300018: component_2
+    4300020: component_4
+    4300022: component_7
+    4300024: component_5
+    4300026: component_6
+    4300028: lk_01_tender
+    4300030: wheel_7
+    4300032: wheel_6
+    4300034: wheel_8
+    4300036: wheel_9
+    7400000: Take 001
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 2
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 2
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 1
+  userData: 
