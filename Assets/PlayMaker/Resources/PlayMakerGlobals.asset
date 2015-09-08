@@ -1,0 +1,490 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 42938266, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: PlayMakerGlobals
+  m_EditorClassIdentifier: 
+  variables:
+    floatVariables:
+    - useVariable: 1
+      name: Text Alpha Cult
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: Text Alpha Gamers
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: Text Alpha Global
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: Text Alpha Marcus
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: Text Alpha Mildred
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: Text Alpha Orange Lady
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: Text Alpha Reprinters
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: Text Alpha Shani
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: Text Alpha Sheet Music
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: Text Alpha Vincent
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: Text Alpha Zerbs
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: Text Alpha piano
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: Volume_1
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 1
+    - useVariable: 1
+      name: Volume_2
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: Volume_3
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: acquire ticket fade
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 2
+    - useVariable: 1
+      name: acquired slow
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: .5
+    - useVariable: 1
+      name: ambient convo transparency
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: .629999995
+    - useVariable: 1
+      name: announcer_volume
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: .800000012
+    - useVariable: 1
+      name: eat volume
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: .600000024
+    - useVariable: 1
+      name: fick hpf
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: global fade-in time
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: .25
+    - useVariable: 1
+      name: global fade-out time
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: .300000012
+    - useVariable: 1
+      name: globat wait time
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 3.5
+    - useVariable: 1
+      name: head_x
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: head_y
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: head_z
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: interaction fade-in time
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: .200000003
+    - useVariable: 1
+      name: interaction fade-out time
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: .200000003
+    - useVariable: 1
+      name: reverb
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: run_add
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 5.5
+    - useVariable: 1
+      name: subway_HPF
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 650
+    - useVariable: 1
+      name: take stuff volume
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: .5
+    - useVariable: 1
+      name: take time
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: .5
+    - useVariable: 1
+      name: text alpha bojudd
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: ticket display wait time
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 3.5
+    - useVariable: 1
+      name: ticketAcquiredVolume
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: .800000012
+    - useVariable: 1
+      name: z formation
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    intVariables:
+    - useVariable: 1
+      name: PIzza Slices
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: cookies
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: fick1 hpf
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: fick2 hpf
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: fick3 hpf
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: fick4 hpf
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: foodiesInt
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: ladies' pizza slice
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: pushedOrNot
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: records
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: reverb_int
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: -50
+    - useVariable: 1
+      name: sheet music
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: subwayHPF
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 650
+    - useVariable: 1
+      name: ticketFoodInt
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: ticketMusicInt
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: ticket_pieces
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    boolVariables:
+    - useVariable: 1
+      name: opening dialog
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: recordStoreBool
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: stole
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: ticketLandingBool
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 1
+    - useVariable: 1
+      name: ticketObservatoryBool
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: ticketSerbsBarBool
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: ticketSubwayBool
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    stringVariables:
+    - useVariable: 1
+      name: 
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: (click to continue)
+    - useVariable: 1
+      name: End Dialog
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: (click to end dialog)
+    - useVariable: 1
+      name: continue
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: (click to continue)
+    - useVariable: 1
+      name: item_use
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: ' '
+    - useVariable: 1
+      name: mouse sensitivity
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 
+    vector2Variables: []
+    vector3Variables: []
+    colorVariables:
+    - useVariable: 1
+      name: dialog_pizza_customers
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: {r: .894162118, g: .638749599, b: .579808235, a: 1}
+    rectVariables: []
+    quaternionVariables: []
+    gameObjectVariables: []
+    objectVariables: []
+    materialVariables: []
+    textureVariables: []
+  events:
+  - stop
+  - start
+  - start_2
+  - stop_2
+  - big_door_Open
+  - Walk Away
+  - Return to the Speaker
+  - Insult
+  - Consolation
+  - Press Button
+  - Key 4
+  - Key 2
+  - Key 3
+  - Key 1
+  - start3
+  - stop3
+  - fuggeddaboutit
+  - bojudd head turn
+  - bojudd head return
+  - shani head return
+  - shani head turn
+  - dialog initiated
+  - bull event
+  - Return to object.
+  - dialog enabled elsewhere
+  - Walk Away Item
+  - thelissa turns head
+  - thelissa head return
+  - lady in orange appears
+  - begin
+  - un-begin
+  - took records
+  - took close records
+  - took sheet music
+  - enable
+  - disable
+  - acuired
+  - secondary acquisition
+  - in bounds
+  - out of bounds
+  - Luuuke looks at you
+  - Luuke looks away
+  - eat cookies
+  - trigger
+  - trigger from train
+  - Hello
+  - escape pressed
+  - found all 8 tickets
+  - check count
+  - no
+  - move
+  - end of game quit 2
+  - end of game quit
+  - final fade
+  - trigger the experience
+  - cookies for all
+  - cookies for none
+  - Key Press
+  - '"i" pressed'
+  - check ticket count
