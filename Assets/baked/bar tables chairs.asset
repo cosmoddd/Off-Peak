@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d41887b1546f5c44ab54e7e65aad3bc, type: 3}
+  m_Name: bar tables chairs
+  m_EditorClassIdentifier: 
+  combinedMaterialInfo:
+  - atlases:
+    - {fileID: 0}
+    texPropertyNames:
+    - 5f4d61696e546578
+  - atlases:
+    - {fileID: 0}
+    texPropertyNames:
+    - 5f4d61696e546578
+  - atlases:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    texPropertyNames:
+    - 5f4d61696e546578
+    - 5f42756d704d6170
+    - 5f476c6f73734d6170
+  materials:
+  - {fileID: 2100000, guid: 6d2b4fe201ca646248b3f2950c29017e, type: 2}
+  - {fileID: 2100000, guid: 95be7ee4221dd47719a0a33f00fa22a2, type: 2}
+  - {fileID: 2100000, guid: 988da924cd13e4cb8bcef8a7b21d36f8, type: 2}
+  - {fileID: 2100000, guid: 5283d44f3a9d84a13bf5d22ede1c5a35, type: 2}
+  prefabUVRects:
+  - x: .000974658877
+    y: .000649350637
+    width: .99805069
+    height: .664935052
+  - x: .000974658877
+    y: .666883111
+    width: .99805069
+    height: .332467526
+  - x: .500487328
+    y: .000487329438
+    width: .499025345
+    height: .499025345
+  - x: .000614250603
+    y: .000487329438
+    width: .628992617
+    height: .499025345
+  resultMaterial: {fileID: 2100000, guid: 754fa4a63efd64059afce8dcffc3f885, type: 2}
+  resultMaterials:
+  - combinedMaterial: {fileID: 2100000, guid: 3b212cfba1ead4af4b5a6d2b4e0d7966, type: 2}
+    sourceMaterials:
+    - {fileID: 2100000, guid: 6d2b4fe201ca646248b3f2950c29017e, type: 2}
+    - {fileID: 2100000, guid: 95be7ee4221dd47719a0a33f00fa22a2, type: 2}
+  - combinedMaterial: {fileID: 2100000, guid: 601df6c97369f478cb5fc2d6a309112f, type: 2}
+    sourceMaterials:
+    - {fileID: 2100000, guid: 988da924cd13e4cb8bcef8a7b21d36f8, type: 2}
+  - combinedMaterial: {fileID: 2100000, guid: 64120748c0d424c39890c49b98a7113b, type: 2}
+    sourceMaterials:
+    - {fileID: 2100000, guid: 5283d44f3a9d84a13bf5d22ede1c5a35, type: 2}
+  doMultiMaterial: 1
+  fixOutOfBoundsUVs: 1

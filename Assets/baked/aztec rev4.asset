@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d41887b1546f5c44ab54e7e65aad3bc, type: 3}
+  m_Name: aztec rev4
+  m_EditorClassIdentifier: 
+  combinedMaterialInfo:
+  - atlases:
+    - {fileID: 0}
+    texPropertyNames:
+    - 5f4d61696e546578
+  materials:
+  - {fileID: 2100000, guid: d4adc952062fdfd4c818b16f213106c5, type: 2}
+  - {fileID: 2100000, guid: 487d9c1062e234b41bc3d4fe31a01c9b, type: 2}
+  - {fileID: 2100000, guid: 4de21be1ff6a1fe41bab2c192221b47e, type: 2}
+  - {fileID: 2100000, guid: c9d9d869ac4b9e74f8bd12b6809a9cd9, type: 2}
+  - {fileID: 2100000, guid: 9fdfe50505acd4895b987192e4d49362, type: 2}
+  - {fileID: 2100000, guid: 82e287f805dd04a4b9aecc23b47bb323, type: 2}
+  - {fileID: 2100000, guid: de2089530d20f4bf98eb1526e93d4255, type: 2}
+  - {fileID: 2100000, guid: b1b8e2b1251a841628cad4b91731be60, type: 2}
+  - {fileID: 2100000, guid: c3414fc465b70bf4fa16f701670ecd0a, type: 2}
+  - {fileID: 2100000, guid: 43bf1f7af211cf44bb136db7b2e83dac, type: 2}
+  prefabUVRects:
+  - x: .000486854929
+    y: .5
+    width: .498539448
+    height: .498539448
+  - x: .000486854929
+    y: .5
+    width: .498539448
+    height: .498539448
+  - x: .5
+    y: .000486854929
+    width: .498539448
+    height: .498539448
+  - x: .5
+    y: .000486854929
+    width: .498539448
+    height: .498539448
+  - x: .5
+    y: .750243425
+    width: .249269724
+    height: .249269724
+  - x: .750243425
+    y: .750243425
+    width: .249269724
+    height: .249269724
+  - x: .750243425
+    y: .5
+    width: .249269724
+    height: .249269724
+  - x: .5
+    y: .5
+    width: .249269724
+    height: .249269724
+  - x: .000486854929
+    y: .000486854929
+    width: .498539448
+    height: .498539448
+  - x: .000486854929
+    y: .000486854929
+    width: .498539448
+    height: .498539448
+  resultMaterial: {fileID: 2100000, guid: 4c5d7060abd704188b928b044dd811fa, type: 2}
+  resultMaterials: []
+  doMultiMaterial: 0
+  fixOutOfBoundsUVs: 1

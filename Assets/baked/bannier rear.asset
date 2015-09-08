@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d41887b1546f5c44ab54e7e65aad3bc, type: 3}
+  m_Name: bannier rear
+  m_EditorClassIdentifier: 
+  combinedMaterialInfo:
+  - atlases:
+    - {fileID: 0}
+    - {fileID: 0}
+    texPropertyNames:
+    - 5f4d61696e546578
+    - 5f42756d704d6170
+  materials:
+  - {fileID: 2100000, guid: deccd1c8a40874237a4d4c1432c05ed7, type: 2}
+  prefabUVRects:
+  - x: .000749063678
+    y: .664642394
+    width: .767041206
+    height: .16329284
+  resultMaterial: {fileID: 2100000, guid: b9d5e4b6ec3324abc97d31acc51259d9, type: 2}
+  resultMaterials: []
+  doMultiMaterial: 0
+  fixOutOfBoundsUVs: 1

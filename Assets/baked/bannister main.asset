@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d41887b1546f5c44ab54e7e65aad3bc, type: 3}
+  m_Name: bannister main
+  m_EditorClassIdentifier: 
+  combinedMaterialInfo:
+  - atlases:
+    - {fileID: 0}
+    - {fileID: 0}
+    texPropertyNames:
+    - 5f4d61696e546578
+    - 5f42756d704d6170
+  materials:
+  - {fileID: 2100000, guid: deccd1c8a40874237a4d4c1432c05ed7, type: 2}
+  - {fileID: 2100000, guid: 55296d1b6ee54e14e8eb4648d4b448ee, type: 2}
+  prefabUVRects:
+  - x: .500972748
+    y: .00194552529
+    width: .498054475
+    height: .996108949
+  - x: .000972762646
+    y: .00194552529
+    width: .498054475
+    height: .996108949
+  resultMaterial: {fileID: 2100000, guid: 742ca796c58b64d49a44482889138ecd, type: 2}
+  resultMaterials: []
+  doMultiMaterial: 0
+  fixOutOfBoundsUVs: 0
