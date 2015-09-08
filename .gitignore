@@ -6,11 +6,11 @@ builds/
 people's art bin/
 surfaces/
 Temp/
-Scenes/_more_past_versions
-Scenes/_PastVersionsFinal
-Scenes/_past_versions_HD
-Scenes/_past_versions
-Scenes_DNU
+**/Scenes/_more_past_versions/
+**/Scenes/_PastVersionsFinal/
+**/Scenes/_past_versions_HD/
+**/Scenes/_past_versions/
+**/Scenes_DNU/
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
