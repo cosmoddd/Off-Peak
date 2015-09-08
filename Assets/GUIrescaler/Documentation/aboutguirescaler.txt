@@ -1,0 +1,41 @@
+--- GUIrescaler v1.0 ---
+
+GUIrescaler is an easy to use, yet powerful script that will automatically rescale text and images so no stretching occurs. GUI in Unity can be tricky and time consuming at times when trying to resize and scale GUI images for all the GUI elements in your game. Even if your game is set to a static resolution, this script is still very useful. It cuts out all the time trying to fix stretching on images and text; it handles all of it for you.
+
+	- Features - 
+
+- Instantly fixes GUIText and GUITexture stretching when resolution is changed in-game.
+
+-Fast, easy to use drag and drop script - drop it onto each GUI element that needs it.
+
+- No scripting or variable editing required.
+
+- Extremely fast and useful for mobile apps that require multiple display dimensions like iOS and android.
+
+- Fixes everything on the fly! If the resolution changes during runtime, the script will notice and update everything on its own.
+
+
+	- Troubleshooting -
+
+- GUIText -
+
+1) It keeps making the size of my text too big!
+
+- GUIrescaler bases the size of the text by the width. Make sure the X scale is correctly.
+
+2) The text isn't anchoring where I want it to!
+
+- In the GUIText inspector options (usually on the right when highlighted), you can set it in the "Anchor" dropdown menu. GUIrescaler doesn't mess with it!
+
+3) The text won't scale at all!
+
+- In the GUIText options, make sure that the checkbox for "Pixel Correct" is off. Then increase the font size to make sure it can handle high resolutions, otherwise it will be too blurry.
+
+- GUITexture -
+
+1) My image looks horrible!
+
+-Hightlight the image in your project folder and switch "Texture Type" to GUI in the Inspector settings.
+
+2) My GUITexture won't rescale!
+-Make sure that you set all of the "Pixel Inset" variables to 0. Then change the size of your image with the scale settings. This will make your image have the ability to rescale appropriately based on resolution.
