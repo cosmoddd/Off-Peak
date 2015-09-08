@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d41887b1546f5c44ab54e7e65aad3bc, type: 3}
+  m_Name: launching area misc
+  m_EditorClassIdentifier: 
+  combinedMaterialInfo:
+  - atlases:
+    - {fileID: 0}
+    - {fileID: 0}
+    texPropertyNames:
+    - 5f4d61696e546578
+    - 5f42756d704d6170
+  materials:
+  - {fileID: 2100000, guid: a86c697959b2a2447beb13cb075cfdf9, type: 2}
+  - {fileID: 2100000, guid: b795ef9877d8a2c4da46782ac79c1097, type: 2}
+  - {fileID: 2100000, guid: 9d67f29baab815f48995ae820eeee48c, type: 2}
+  prefabUVRects:
+  - x: .000649350637
+    y: .000974658877
+    width: .664935052
+    height: .99805069
+  - x: .000649350637
+    y: .000974658877
+    width: .664935052
+    height: .99805069
+  - x: .666883111
+    y: .000974658877
+    width: .332467526
+    height: .499025345
+  resultMaterial: {fileID: 2100000, guid: 4483b240a29884755b22dc43ac0aa352, type: 2}
+  resultMaterials: []
+  doMultiMaterial: 0
+  fixOutOfBoundsUVs: 0

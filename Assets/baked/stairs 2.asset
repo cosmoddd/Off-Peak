@@ -1,0 +1,134 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d41887b1546f5c44ab54e7e65aad3bc, type: 3}
+  m_Name: stairs 2
+  m_EditorClassIdentifier: 
+  combinedMaterialInfo:
+  - atlases:
+    - {fileID: 2800000, guid: 9470468fda72f4773a90a0306decbf0f, type: 3}
+    texPropertyNames:
+    - 5f4d61696e546578
+  - atlases:
+    - {fileID: 2800000, guid: 888b6b0ed7308e443b36a063ec5145db, type: 3}
+    - {fileID: 2800000, guid: 7cc55cec99e0c754a91dbea4fb1bfbba, type: 3}
+    texPropertyNames:
+    - 5f4d61696e546578
+    - 5f42756d704d6170
+  - atlases:
+    - {fileID: 2800000, guid: 1c4c2594ab7119c48a2246bda9ba46d3, type: 3}
+    - {fileID: 2800000, guid: db37d706cdff6f1419734f1ab4ba58c9, type: 3}
+    - {fileID: 0}
+    texPropertyNames:
+    - 5f4d61696e546578
+    - 5f42756d704d6170
+    - 5f496c6c756d
+  - atlases:
+    - {fileID: 2800000, guid: 1c4c2594ab7119c48a2246bda9ba46d3, type: 3}
+    - {fileID: 2800000, guid: db37d706cdff6f1419734f1ab4ba58c9, type: 3}
+    texPropertyNames:
+    - 5f4d61696e546578
+    - 5f42756d704d6170
+  - atlases:
+    - {fileID: 2800000, guid: 6d99e25c326018247a9a64d77c7f2182, type: 3}
+    - {fileID: 2800000, guid: 78539658ce7970846941febcb6b6ef79, type: 3}
+    texPropertyNames:
+    - 5f4d61696e546578
+    - 5f42756d704d6170
+  - atlases:
+    - {fileID: 2800000, guid: 53f40d9437aab914baedc049c252966a, type: 3}
+    - {fileID: 2800000, guid: 8c32659b85509e243af7fdea906f601f, type: 3}
+    - {fileID: 2800000, guid: 5bb7713729b60104bbda184606332827, type: 3}
+    texPropertyNames:
+    - 5f4d61696e546578
+    - 5f42756d704d6170
+    - 5f496c6c756d
+  - atlases:
+    - {fileID: 2800000, guid: c8176da20792ff1489489efb5b236897, type: 3}
+    - {fileID: 2800000, guid: 7b71942f10d916f4aad70f2bb888f184, type: 3}
+    texPropertyNames:
+    - 5f4d61696e546578
+    - 5f42756d704d6170
+  - atlases:
+    - {fileID: 2800000, guid: cb5e449853b0f7641a6d874a4059e2f7, type: 3}
+    - {fileID: 2800000, guid: eaf105a703de36148b9c360a9ba03e80, type: 3}
+    texPropertyNames:
+    - 5f4d61696e546578
+    - 5f42756d704d6170
+  materials:
+  - {fileID: 2100000, guid: 55296d1b6ee54e14e8eb4648d4b448ee, type: 2}
+  - {fileID: 2100000, guid: ca951a36bb708fa4596ab58ae6551bed, type: 2}
+  - {fileID: 2100000, guid: 89b4c505bf72e434eb2d1d703e68e661, type: 2}
+  - {fileID: 2100000, guid: 5fec77b5982ea3348b5be556ec9afba7, type: 2}
+  - {fileID: 2100000, guid: 1b1a016856447204289da1fec2ee17e7, type: 2}
+  - {fileID: 2100000, guid: 4bb12e2031b9add4ab7d29bb4095eadd, type: 2}
+  - {fileID: 2100000, guid: 9e52c53a0d29f2c49adf71e8cc6ca46f, type: 2}
+  - {fileID: 2100000, guid: 3e7b594893498ec42932503e8327d53c, type: 2}
+  prefabUVRects:
+  - x: 0
+    y: 0
+    width: 1
+    height: 1
+  - x: 0
+    y: 0
+    width: 1
+    height: 1
+  - x: 0
+    y: 0
+    width: 1
+    height: 1
+  - x: 0
+    y: 0
+    width: 1
+    height: 1
+  - x: 0
+    y: 0
+    width: 1
+    height: 1
+  - x: 0
+    y: 0
+    width: 1
+    height: 1
+  - x: 0
+    y: 0
+    width: 1
+    height: 1
+  - x: 0
+    y: 0
+    width: 1
+    height: 1
+  resultMaterial: {fileID: 0}
+  resultMaterials:
+  - combinedMaterial: {fileID: 2100000, guid: 0dbd2c4e16a064af8a48d5478dc1861e, type: 2}
+    sourceMaterials:
+    - {fileID: 2100000, guid: 55296d1b6ee54e14e8eb4648d4b448ee, type: 2}
+  - combinedMaterial: {fileID: 2100000, guid: 682148a6867f24a889a393e9f3af26b9, type: 2}
+    sourceMaterials:
+    - {fileID: 2100000, guid: ca951a36bb708fa4596ab58ae6551bed, type: 2}
+  - combinedMaterial: {fileID: 2100000, guid: 87510c85720fd48498e45938b2065748, type: 2}
+    sourceMaterials:
+    - {fileID: 2100000, guid: 89b4c505bf72e434eb2d1d703e68e661, type: 2}
+  - combinedMaterial: {fileID: 2100000, guid: f429d3907dcae4b6f936160bb7b72f8c, type: 2}
+    sourceMaterials:
+    - {fileID: 2100000, guid: 5fec77b5982ea3348b5be556ec9afba7, type: 2}
+  - combinedMaterial: {fileID: 2100000, guid: 33d8532ad8260420aa87e7dc3819f03a, type: 2}
+    sourceMaterials:
+    - {fileID: 2100000, guid: 1b1a016856447204289da1fec2ee17e7, type: 2}
+  - combinedMaterial: {fileID: 2100000, guid: 7cba911b2f8d3451c90f32919b0049b2, type: 2}
+    sourceMaterials:
+    - {fileID: 2100000, guid: 4bb12e2031b9add4ab7d29bb4095eadd, type: 2}
+  - combinedMaterial: {fileID: 2100000, guid: 8021028904bee44c9b9040c39c457700, type: 2}
+    sourceMaterials:
+    - {fileID: 2100000, guid: 9e52c53a0d29f2c49adf71e8cc6ca46f, type: 2}
+  - combinedMaterial: {fileID: 2100000, guid: d51ddfacf22564d7586bbda36f3fe22c, type: 2}
+    sourceMaterials:
+    - {fileID: 2100000, guid: 3e7b594893498ec42932503e8327d53c, type: 2}
+  doMultiMaterial: 1
+  fixOutOfBoundsUVs: 0

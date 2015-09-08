@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d41887b1546f5c44ab54e7e65aad3bc, type: 3}
+  m_Name: rails
+  m_EditorClassIdentifier: 
+  combinedMaterialInfo:
+  - atlases:
+    - {fileID: 0}
+    - {fileID: 0}
+    texPropertyNames:
+    - 5f4d61696e546578
+    - 5f42756d704d6170
+  materials:
+  - {fileID: 2100000, guid: b805306da7ea64f85a26a50645e02570, type: 2}
+  - {fileID: 2100000, guid: f4c16f29da06bd443bf59aeae3eb2b73, type: 2}
+  prefabUVRects:
+  - x: .000974658877
+    y: .500972748
+    width: .99805069
+    height: .498054475
+  - x: .000974658877
+    y: .000972762646
+    width: .99805069
+    height: .498054475
+  resultMaterial: {fileID: 2100000, guid: d5c8cc49f968c4749abe41e181155624, type: 2}
+  resultMaterials: []
+  doMultiMaterial: 0
+  fixOutOfBoundsUVs: 0

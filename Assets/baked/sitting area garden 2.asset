@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d41887b1546f5c44ab54e7e65aad3bc, type: 3}
+  m_Name: sitting area garden 2
+  m_EditorClassIdentifier: 
+  combinedMaterialInfo:
+  - atlases:
+    - {fileID: 0}
+    - {fileID: 0}
+    texPropertyNames:
+    - 5f4d61696e546578
+    - 5f42756d704d6170
+  materials:
+  - {fileID: 2100000, guid: b1b8e2b1251a841628cad4b91731be60, type: 2}
+  - {fileID: 2100000, guid: 3a5372067b64c40cb85fe24206db5bfc, type: 2}
+  - {fileID: 2100000, guid: 4befe2a8e9d67834a839ee8ee6853535, type: 2}
+  - {fileID: 2100000, guid: 4de21be1ff6a1fe41bab2c192221b47e, type: 2}
+  - {fileID: 2100000, guid: b993e33bb57f243689846333bde2552c, type: 2}
+  - {fileID: 2100000, guid: 565cb96396c6d40c49da13b62ad039af, type: 2}
+  - {fileID: 2100000, guid: 7f8edcb195e6b418ab0063fcf881601e, type: 2}
+  - {fileID: 2100000, guid: de2089530d20f4bf98eb1526e93d4255, type: 2}
+  - {fileID: 2100000, guid: 302611da8ce374883a39a8b5e893a644, type: 2}
+  - {fileID: 2100000, guid: 43bf1f7af211cf44bb136db7b2e83dac, type: 2}
+  - {fileID: 2100000, guid: 15caf887086c548ea9c94bc491f78b4c, type: 2}
+  - {fileID: 2100000, guid: 487d9c1062e234b41bc3d4fe31a01c9b, type: 2}
+  prefabUVRects:
+  - x: .600077868
+    y: .706232786
+    width: .199376941
+    height: .23464711
+  - x: .600077868
+    y: .470669121
+    width: .199376941
+    height: .23464711
+  - x: .000389408087
+    y: .000458295137
+    width: .398753881
+    height: .46929422
+  - x: .000389408087
+    y: .000458295137
+    width: .398753881
+    height: .46929422
+  - x: .0510124601
+    y: .940879941
+    width: .0498442352
+    height: .0586617775
+  - x: .800233662
+    y: .470669121
+    width: .199376941
+    height: .23464711
+  - x: .399922132
+    y: .706232786
+    width: .199376941
+    height: .23464711
+  - x: .799454808
+    y: .000458295137
+    width: .199376941
+    height: .23464711
+  - x: .399922132
+    y: .470669121
+    width: .199376941
+    height: .23464711
+  - x: .000389408087
+    y: .470669121
+    width: .398753881
+    height: .46929422
+  - x: .000389408087
+    y: .940879941
+    width: .0498442352
+    height: .0586617775
+  - x: .399922132
+    y: .000458295137
+    width: .398753881
+    height: .46929422
+  resultMaterial: {fileID: 2100000, guid: 457dcba23eb3c4b4db25ffe798870860, type: 2}
+  resultMaterials: []
+  doMultiMaterial: 0
+  fixOutOfBoundsUVs: 0

@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d41887b1546f5c44ab54e7e65aad3bc, type: 3}
+  m_Name: stairs
+  m_EditorClassIdentifier: 
+  combinedMaterialInfo:
+  - atlases:
+    - {fileID: 0}
+    texPropertyNames:
+    - 5f4d61696e546578
+  materials:
+  - {fileID: 2100000, guid: 55296d1b6ee54e14e8eb4648d4b448ee, type: 2}
+  - {fileID: 2100000, guid: ca951a36bb708fa4596ab58ae6551bed, type: 2}
+  - {fileID: 2100000, guid: 89b4c505bf72e434eb2d1d703e68e661, type: 2}
+  - {fileID: 2100000, guid: 5fec77b5982ea3348b5be556ec9afba7, type: 2}
+  - {fileID: 2100000, guid: 1b1a016856447204289da1fec2ee17e7, type: 2}
+  - {fileID: 2100000, guid: 4bb12e2031b9add4ab7d29bb4095eadd, type: 2}
+  - {fileID: 2100000, guid: 9e52c53a0d29f2c49adf71e8cc6ca46f, type: 2}
+  - {fileID: 2100000, guid: 3e7b594893498ec42932503e8327d53c, type: 2}
+  prefabUVRects:
+  - x: .000324886292
+    y: .800077915
+    width: .166341782
+    height: .199532345
+  - x: .333658218
+    y: .400233835
+    width: .332683563
+    height: .39906469
+  - x: .666991532
+    y: .400233835
+    width: .332683563
+    height: .39906469
+  - x: .666991532
+    y: .400233835
+    width: .332683563
+    height: .39906469
+  - x: .666991532
+    y: .000389711611
+    width: .332683563
+    height: .39906469
+  - x: .000324886292
+    y: .000389711611
+    width: .332683563
+    height: .39906469
+  - x: .000324886292
+    y: .400233835
+    width: .332683563
+    height: .39906469
+  - x: .333658218
+    y: .000389711611
+    width: .332683563
+    height: .39906469
+  resultMaterial: {fileID: 2100000, guid: 5a36a1dc3180f4204840f34d9d5be9c4, type: 2}
+  resultMaterials: []
+  doMultiMaterial: 0
+  fixOutOfBoundsUVs: 0

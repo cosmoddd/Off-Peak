@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d41887b1546f5c44ab54e7e65aad3bc, type: 3}
+  m_Name: windows2
+  m_EditorClassIdentifier: 
+  combinedMaterialInfo:
+  - atlases:
+    - {fileID: 0}
+    - {fileID: 0}
+    texPropertyNames:
+    - 5f4d61696e546578
+    - 5f496c6c756d
+  materials:
+  - {fileID: 2100000, guid: 2afe38eaae1024d26bc379c30d951cf4, type: 2}
+  - {fileID: 2100000, guid: 36c71f131bf6a486482a863e2fe3f6a5, type: 2}
+  - {fileID: 2100000, guid: 14186d663975146f59a2dfbbd45c2490, type: 2}
+  - {fileID: 2100000, guid: f7210b7e58d404ce8b68dab810d81ab6, type: 2}
+  - {fileID: 2100000, guid: 5efbbf609c38a447a9344abb1549dc91, type: 2}
+  - {fileID: 2100000, guid: 4ce00659e513f9d419d8d5527b01d26d, type: 2}
+  - {fileID: 2100000, guid: 7d745483793d6497dbb56a114a317701, type: 2}
+  - {fileID: 2100000, guid: 32e38812bd84441cca4bbb03a58973e3, type: 2}
+  - {fileID: 2100000, guid: 72f259b02336f44828b96d7f3b99b385, type: 2}
+  - {fileID: 2100000, guid: 5af23640e9ad34ca39b7fa9623cca0e7, type: 2}
+  - {fileID: 2100000, guid: ac6a05dab03e74ef59cc0c447333af0e, type: 2}
+  - {fileID: 2100000, guid: 30ec40bdc969b49d0b8aaa2b3af17d84, type: 2}
+  - {fileID: 2100000, guid: db3072406128f4cc8b3b20eb1467f690, type: 2}
+  - {fileID: 2100000, guid: b69b3934b77fe47c8923d98f525b9853, type: 2}
+  - {fileID: 2100000, guid: c1e42baf54fff40faa32b2bff71d53a7, type: 2}
+  prefabUVRects:
+  - x: .00751879718
+    y: .73595506
+    width: .962406039
+    height: .0449438207
+  - x: .00751879718
+    y: .634831488
+    width: .962406039
+    height: .0898876414
+  - x: .00751879718
+    y: .578651667
+    width: .962406039
+    height: .0449438207
+  - x: .00751879718
+    y: .792134821
+    width: .962406039
+    height: .0449438207
+  - x: .984962404
+    y: .00561797759
+    width: .00751879672
+    height: .00561797759
+  - x: .984962404
+    y: .00561797759
+    width: .00751879672
+    height: .00561797759
+  - x: .00751879718
+    y: .904494405
+    width: .962406039
+    height: .0898876414
+  - x: .00751879718
+    y: .848314583
+    width: .962406039
+    height: .0449438207
+  - x: .00751879718
+    y: .11797753
+    width: .962406039
+    height: .0898876414
+  - x: .00751879718
+    y: .061797753
+    width: .962406039
+    height: .0449438207
+  - x: .00751879718
+    y: .00561797759
+    width: .962406039
+    height: .0449438207
+  - x: .00751879718
+    y: .219101131
+    width: .962406039
+    height: .0898876414
+  - x: .00751879718
+    y: .477528095
+    width: .962406039
+    height: .0898876414
+  - x: .00751879718
+    y: .421348304
+    width: .962406039
+    height: .0449438207
+  - x: .00751879718
+    y: .320224732
+    width: .962406039
+    height: .0898876414
+  resultMaterial: {fileID: 2100000, guid: fdb00195258e74effbbc04e105a13f31, type: 2}
+  resultMaterials: []
+  doMultiMaterial: 0
+  fixOutOfBoundsUVs: 0
