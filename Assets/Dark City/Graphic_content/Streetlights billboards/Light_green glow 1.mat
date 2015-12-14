@@ -38,13 +38,6 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Illum
-        second:
-          m_Texture: {fileID: 2800000, guid: 2ff090d211d99ef42baeddd7c6825e57, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
@@ -85,6 +78,13 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Illum
+        second:
+          m_Texture: {fileID: 2800000, guid: 2ff090d211d99ef42baeddd7c6825e57, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -102,18 +102,6 @@ Material:
         first:
           name: _Shininess
         second: .484956503
-      data:
-        first:
-          name: _InvFade
-        second: 2.44160724
-      data:
-        first:
-          name: _EmissionLM
-        second: 0
-      data:
-        first:
-          name: _EmissionGain
-        second: .159999996
       data:
         first:
           name: _Parallax
@@ -150,11 +138,23 @@ Material:
         first:
           name: _Metallic
         second: 0
+      data:
+        first:
+          name: _InvFade
+        second: 2.44160724
+      data:
+        first:
+          name: _EmissionLM
+        second: 0
+      data:
+        first:
+          name: _EmissionGain
+        second: .159999996
     m_Colors:
       data:
         first:
           name: _EmissionColor
-        second: {r: .0241409298, g: 0, b: .866666675, a: 1}
+        second: {r: .894162118, g: .894162118, b: .894162118, a: 1}
       data:
         first:
           name: _Color
