@@ -37,7 +37,7 @@ public class LoadNewArea : MonoBehaviour {
 
 	IEnumerator LoadOverTime(GameObject g){
 		Transform[] children = g.GetComponentsInChildren<Transform>(true);
-		Debug.LogError(children.Length);
+		Debug.Log(children.Length);
 		for(int i = 0; i < children.Length; i++){
 			children[i].gameObject.SetActive(activate);
 			if (i % 10 == 0)

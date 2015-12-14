@@ -43,21 +43,21 @@ Material:
         second: .484956503
       data:
         first:
-          name: _InvFade
-        second: 2.44160724
-      data:
-        first:
           name: _EmissionLM
         second: 0
       data:
         first:
           name: _EmissionGain
         second: .303571403
+      data:
+        first:
+          name: _InvFade
+        second: 2.44160724
     m_Colors:
       data:
         first:
           name: _EmissionColor
-        second: {r: .894162118, g: .894162118, b: .894162118, a: 1}
+        second: {r: .3125, g: 0, b: 1, a: 1}
       data:
         first:
           name: _Color
@@ -68,9 +68,9 @@ Material:
         second: {r: .119403005, g: .119403005, b: .119403005, a: 1}
       data:
         first:
-          name: _TintColor
-        second: {r: 1, g: 1, b: 1, a: .501960814}
-      data:
-        first:
           name: _DiffuseColor
         second: {r: .835766375, g: .835766375, b: .835766375, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: 1, g: 1, b: 1, a: .501960814}
