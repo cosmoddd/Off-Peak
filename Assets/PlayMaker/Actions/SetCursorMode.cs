@@ -2,7 +2,6 @@
 /*--- __ECO__ __ACTION__ ---*/
 
 using UnityEngine;
-using System.Collections;
 
 namespace HutongGames.PlayMaker.Actions
 {
@@ -15,8 +14,7 @@ namespace HutongGames.PlayMaker.Actions
 		[ObjectType(typeof(Texture2D))]
 		public FsmObject cursorTexture;
 
-		[Tooltip("The offset from the top left of the texture to use as the target point (must be within the bounds of the cursor). \n\n" +
-			"0,0 is normal behavior.")]
+		[Tooltip("The offset from the top left of the texture to use as the target point (must be within the bounds of the cursor). \n\n" + "0,0 is normal behavior.")]
 		public FsmVector2 hotSpot;
 
 		public enum RenderMode
@@ -32,12 +30,23 @@ namespace HutongGames.PlayMaker.Actions
 			ConfinedToGameWindow
 		}
 
+	    public enum UpdateType
+	    {
+            OnGui,
+            Once,
+	        Update,
+            LateUpdate
+
+	    }
+
 		[Tooltip("\nAuto: Use hardware cursors on supported platforms.\n\n" +
 			"Or\n\nForce the use of software cursors.")]
 		public RenderMode renderMode;
 
 		[Tooltip("\nFree Movement\nLocked to window center\nFree, but Confined to the game window")]
 		public CurState lockMode;
+
+	    public UpdateType updateType;
 
 		[Tooltip("Hide the cursor?")]
 		public FsmBool hideCursor;
@@ -54,17 +63,26 @@ namespace HutongGames.PlayMaker.Actions
 			lockMode = CurState.None;
 			hideCursor = true;
 		}
-		
-		public override void OnEnter()
-		{
-			switch (lockMode) 
+
+	    public override void OnEnter() 
+        {
+	        ApplyMode();
+            if (updateType == UpdateType.Once) Finish();
+	    }
+
+	    public override void OnUpdate() { if (updateType == UpdateType.Update) ApplyMode(); }
+	    public override void OnLateUpdate() { if (updateType == UpdateType.LateUpdate) ApplyMode(); }
+        public override void OnGUI() { if (updateType == UpdateType.OnGui) ApplyMode(); }
+
+	    public void ApplyMode()
+	    {
+            switch (lockMode) 
 			{
 			case CurState.None:
 				_newMode = CursorLockMode.None;
 				break;
 			case CurState.LockedToCenter:
 				_newMode = CursorLockMode.Locked;
-				Cursor.visible = false;
 				break;
 			case CurState.ConfinedToGameWindow:
 				_newMode = CursorLockMode.Confined;
@@ -81,14 +99,14 @@ namespace HutongGames.PlayMaker.Actions
 				break;
 			}
 
-			// PlayMakerGUI.HideCursor = hideCursor.Value; 
 			Cursor.visible = !hideCursor.Value;
 
-			Texture2D _t = cursorTexture.Value as Texture2D;
-			Cursor.SetCursor(_t, (hotSpot.IsNone) ? new Vector2(0,0) : hotSpot.Value, _renderAs);
-			Cursor.lockState = _newMode;
+            Texture2D newTexture = cursorTexture.Value as Texture2D;
+		    Cursor.SetCursor(newTexture, (hotSpot.IsNone) 
+                ? Vector2.zero
+                : hotSpot.Value, _renderAs);
 
-			Finish();
-		}
+			Cursor.lockState = _newMode;
+	    }
 	}
 }
