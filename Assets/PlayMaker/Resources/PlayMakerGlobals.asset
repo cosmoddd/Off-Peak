@@ -114,25 +114,25 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: .5
+      value: 0.5
     - useVariable: 1
       name: ambient convo transparency
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: .629999995
+      value: 0.63
     - useVariable: 1
       name: announcer_volume
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: .800000012
+      value: 0.8
     - useVariable: 1
       name: eat volume
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: .600000024
+      value: 0.6
     - useVariable: 1
       name: fick hpf
       tooltip: 
@@ -144,13 +144,13 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: .25
+      value: 0.25
     - useVariable: 1
       name: global fade-out time
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: .300000012
+      value: 0.3
     - useVariable: 1
       name: globat wait time
       tooltip: 
@@ -180,13 +180,13 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: .200000003
+      value: 0.2
     - useVariable: 1
       name: interaction fade-out time
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: .200000003
+      value: 0.2
     - useVariable: 1
       name: reverb
       tooltip: 
@@ -210,13 +210,13 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: .5
+      value: 0.5
     - useVariable: 1
       name: take time
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: .5
+      value: 0.5
     - useVariable: 1
       name: text alpha bojudd
       tooltip: 
@@ -234,7 +234,7 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: .800000012
+      value: 0.8
     - useVariable: 1
       name: z formation
       tooltip: 
@@ -420,7 +420,7 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: {r: .894162118, g: .638749599, b: .579808235, a: 1}
+      value: {r: 0.8941621, g: 0.6387496, b: 0.57980824, a: 1}
     rectVariables: []
     quaternionVariables: []
     gameObjectVariables: []
@@ -489,3 +489,4 @@ MonoBehaviour:
   - '"i" pressed'
   - check ticket count
   - to ending
+  - ticket acquired
