@@ -43,16 +43,16 @@ Material:
         second: 0.4849565
       data:
         first:
+          name: _EmissionLM
+        second: 0
+      data:
+        first:
           name: _InvFade
         second: 2.4416072
       data:
         first:
           name: _EmissionGain
         second: 0.3035714
-      data:
-        first:
-          name: _EmissionLM
-        second: 0
     m_Colors:
       data:
         first:

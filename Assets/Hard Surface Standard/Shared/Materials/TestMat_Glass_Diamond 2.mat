@@ -88,6 +88,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _SpecGlossMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _Spec_Gloss_Reflec_Masks
         second:
           m_Texture: {fileID: 2800000, guid: e348b5608a538f648a29786c8144229e, type: 3}
@@ -100,14 +107,11 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+    m_Floats:
       data:
         first:
-          name: _SpecGlossMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
+          name: _Reflection
+        second: 0.55410445
       data:
         first:
           name: _SrcBlend
@@ -118,20 +122,16 @@ Material:
         second: 10
       data:
         first:
-          name: _Reflection
-        second: .554104447
-      data:
-        first:
           name: _Cutoff
-        second: .5
+        second: 0.5
       data:
         first:
           name: _Shininess
-        second: 1.44004178
+        second: 1.4400418
       data:
         first:
           name: _Parallax
-        second: .0199999996
+        second: 0.02
       data:
         first:
           name: _ZWrite
@@ -139,11 +139,11 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: .224999994
+        second: 0.225
       data:
         first:
           name: _BumpScale
-        second: .379999995
+        second: 4.3
       data:
         first:
           name: _OcclusionStrength
@@ -163,11 +163,11 @@ Material:
       data:
         first:
           name: _Metallic
-        second: .718999982
+        second: 0.719
       data:
         first:
           name: _Gloss
-        second: .160714284
+        second: 0.16071428
       data:
         first:
           name: _FrezPow
@@ -175,11 +175,11 @@ Material:
       data:
         first:
           name: _FrezFalloff
-        second: 1.34328353
+        second: 1.3432835
       data:
         first:
           name: _Metalics
-        second: .343283594
+        second: 0.3432836
       data:
         first:
           name: _Density
@@ -187,7 +187,7 @@ Material:
       data:
         first:
           name: _EdgeAlpha
-        second: .178571433
+        second: 0.17857143
       data:
         first:
           name: _Bounds
@@ -204,15 +204,15 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .705882311, g: .705882311, b: .705882311, a: .372000009}
+        second: {r: 0.6911765, g: 0.6911765, b: 0.6911765, a: 0.372}
       data:
         first:
           name: _SpecColor
-        second: {r: .139705896, g: .13867864, b: .13867864, a: .222000003}
+        second: {r: 0.1397059, g: 0.13867864, b: 0.13867864, a: 0.222}
       data:
         first:
           name: _ReflectColor
-        second: {r: 1, g: 1, b: 1, a: .5}
+        second: {r: 1, g: 1, b: 1, a: 0.5}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6
