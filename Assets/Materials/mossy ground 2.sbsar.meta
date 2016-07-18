@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 00a59003f1fa04da19cd3f132f08e2a5
-timeCreated: 1436214850
+timeCreated: 1468801519
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -8,6 +8,7 @@ SubstanceImporter:
   - serializedVersion: 16
     name: ground_moss 2
     prototypeName: ground_moss
+    shaderName: 
     shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
     shaderKeywords: _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
     renderQueue: -1
@@ -15,7 +16,7 @@ SubstanceImporter:
     inputs:
     - name: normal_intensity
       value:
-        scalar[0]: .833000004
+        scalar[0]: 0.833
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -133,15 +134,15 @@ SubstanceImporter:
         data:
           first:
             name: _Cutoff
-          second: .5
+          second: 0.5
         data:
           first:
             name: _Shininess
-          second: .857010067
+          second: 0.85701007
         data:
           first:
             name: _Parallax
-          second: .0131000001
+          second: 0.0131
         data:
           first:
             name: _ZWrite
@@ -149,11 +150,11 @@ SubstanceImporter:
         data:
           first:
             name: _Glossiness
-          second: .5
+          second: 0.5
         data:
           first:
             name: _BumpScale
-          second: .439999998
+          second: 0.44
         data:
           first:
             name: _OcclusionStrength
@@ -186,7 +187,7 @@ SubstanceImporter:
         data:
           first:
             name: _SpecColor
-          second: {r: .5, g: .5, b: .5, a: 1}
+          second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     textureParameters:
     - name: ground_moss 2_diffuse
       alphaSource: 5

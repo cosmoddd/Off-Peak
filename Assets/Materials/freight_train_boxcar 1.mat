@@ -38,6 +38,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _Illum
+        second:
+          m_Texture: {fileID: 2800000, guid: 8012b8bc8dbff0d41b6dd6f864f0f8bb, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
@@ -80,13 +87,6 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Illum
-        second:
-          m_Texture: {fileID: 2800000, guid: 8012b8bc8dbff0d41b6dd6f864f0f8bb, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _Cube
         second:
           m_Texture: {fileID: 0}
@@ -104,15 +104,19 @@ Material:
       data:
         first:
           name: _Cutoff
-        second: .5
+        second: 0.5
       data:
         first:
           name: _Shininess
-        second: .222331852
+        second: 0.22233185
+      data:
+        first:
+          name: _EmissionLM
+        second: 0
       data:
         first:
           name: _Parallax
-        second: .0199999996
+        second: 0.02
       data:
         first:
           name: _ZWrite
@@ -120,7 +124,7 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: .5
+        second: 0.793
       data:
         first:
           name: _BumpScale
@@ -144,11 +148,7 @@ Material:
       data:
         first:
           name: _Metallic
-        second: 0
-      data:
-        first:
-          name: _EmissionLM
-        second: 0
+        second: 0.648
     m_Colors:
       data:
         first:
@@ -157,12 +157,12 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .470802933, g: .470802933, b: .470802933, a: 1}
+        second: {r: 0.47080293, g: 0.47080293, b: 0.47080293, a: 1}
       data:
         first:
           name: _SpecColor
-        second: {r: .799270034, g: .775412202, b: .775412202, a: 1}
+        second: {r: 0.79927003, g: 0.7754122, b: 0.7754122, a: 1}
       data:
         first:
           name: _ReflectColor
-        second: {r: 1, g: 1, b: 1, a: .5}
+        second: {r: 1, g: 1, b: 1, a: 0.5}
