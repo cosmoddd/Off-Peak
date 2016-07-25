@@ -28,7 +28,7 @@ PlayerSettings:
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
   iosAppInBackgroundBehavior: 0
-  displayResolutionDialog: 2
+  displayResolutionDialog: 1
   iosAllowHTTPDownload: 1
   allowedAutorotateToPortrait: 1
   allowedAutorotateToPortraitUpsideDown: 1
@@ -174,7 +174,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 63391eae5c22b4854b0faa1afee5aeaa, type: 3}
+      m_Icon: {fileID: 2800000, guid: 02cc5dd920af1ea4bb128d82b278ff6b, type: 3}
       m_Width: 128
       m_Height: 128
   m_BuildTargetBatching:
