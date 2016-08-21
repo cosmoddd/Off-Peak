@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 060888bfe1e1148988c7981c0ab7ca84
-timeCreated: 1468803066
+timeCreated: 1471738245
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -9,9 +9,9 @@ SubstanceImporter:
     name: concrete_044
     prototypeName: concrete_044
     shaderName: 
-    shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
-    shaderKeywords: 
-    renderQueue: 2000
+    shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+    shaderKeywords: _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
+    renderQueue: -1
     lightmapFlags: 5
     inputs:
     - name: $outputsize
@@ -44,14 +44,14 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: lighting_angle
       value:
-        scalar[0]: 0.125
+        scalar[0]: 0.209
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
     - name: diffuse_ao_intensity
       value:
-        scalar[0]: 0
+        scalar[0]: 0.038
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -65,7 +65,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: contrast
       value:
-        scalar[0]: 0
+        scalar[0]: 0.327
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -107,14 +107,14 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: cracks
       value:
-        scalar[0]: 0
+        scalar[0]: 0.45
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
     - name: dirtiness
       value:
-        scalar[0]: 0
+        scalar[0]: 0.716
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -157,6 +157,62 @@ SubstanceImporter:
             texture: {instanceID: 0}
             scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _BumpMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _DetailNormalMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _ParallaxMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _OcclusionMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _EmissionMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _DetailMask
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _DetailAlbedoMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _MetallicGlossMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
       floats:
         data:
           first:
@@ -189,7 +245,7 @@ SubstanceImporter:
         data:
           first:
             name: _BumpScale
-          second: 1
+          second: 2.93
         data:
           first:
             name: _OcclusionStrength
@@ -249,11 +305,32 @@ SubstanceImporter:
       filterMode: 1
       aniso: 1
       wrapMode: 0
+    - name: concrete_044_roughness
+      alphaSource: 0
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
     textureAssignments:
     - shaderProp:
         name: _MainTex
       material: {instanceID: 0}
       baseUID: 2745898826
+    - shaderProp:
+        name: _BumpMap
+      material: {instanceID: 0}
+      baseUID: 2745898820
+    - shaderProp:
+        name: _ParallaxMap
+      material: {instanceID: 0}
+      baseUID: 2745898840
+    - shaderProp:
+        name: _OcclusionMap
+      material: {instanceID: 0}
+      baseUID: 2745898846
+    - shaderProp:
+        name: _MetallicGlossMap
+      material: {instanceID: 0}
+      baseUID: 2745898844
     buildTargetSettings:
     - serializedVersion: 2
       buildTarget: 

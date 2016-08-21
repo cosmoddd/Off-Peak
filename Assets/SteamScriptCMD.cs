@@ -5,6 +5,10 @@ using Steamworks;
 
 public class SteamScriptCMD : MonoBehaviour {
 
+	public string[] achievementName;
+	public bool Checkkkk;
+	public string theKey;
+
 	protected Callback<GameOverlayActivated_t> m_GameOverlayActivated;
 
 	void Start () {
@@ -14,7 +18,7 @@ public class SteamScriptCMD : MonoBehaviour {
 			Debug.Log(name);
 			Debug.Log("steam has been initialized");
 
-		}
+	}
 
 	}
 	private void OnEnable(){
@@ -33,9 +37,29 @@ public class SteamScriptCMD : MonoBehaviour {
 		}
 	}
 
+	public void CheckAchievement(){
+	
+		Debug.Log ("Achieve this: " + SteamUserStats.GetAchievementDisplayAttribute(achievementName[0], "name"));
+		Debug.Log ("Achieve this: " + SteamUserStats.GetAchievementDisplayAttribute(achievementName[0], "desc"));
+		Debug.Log ("Achieve this: " + SteamUserStats.GetAchievementDisplayAttribute(achievementName[0], "hidden"));
+	//	Debug.Log ("achieved?" + Steam
+
+	//	Debug.Log ("Achieve this: " + SteamManager.StatsAndAchievements.GetAchievement(achievementName[0]).m_strName);
+
+	//	Debug.Log ("Achieve this: " + SteamManager.StatsAndAchievements.GetAchievement(achievementName[0]).m_strDescription);
+			
+	}
+
+	
+
 
 	// Update is called once per frame
 	void Update () {
 	
+		if (Input.GetKeyDown(KeyCode.B))
+		{
+			CheckAchievement();
+		}
+
 	}
 }

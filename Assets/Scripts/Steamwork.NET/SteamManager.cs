@@ -3,7 +3,7 @@
 // Where that dedication is not recognized you are granted a perpetual,
 // irrevokable license to copy and modify this files as you see fit.
 //
-// Version: 1.0.3
+// Version: 1.0.1
 
 using UnityEngine;
 using System.Collections;
@@ -13,7 +13,6 @@ using Steamworks;
 // The SteamManager provides a base implementation of Steamworks.NET on which you can build upon.
 // It handles the basics of starting up and shutting down the SteamAPI for use.
 //
-[DisallowMultipleComponent]
 class SteamManager : MonoBehaviour {
 	private static SteamManager s_instance;
 	private static SteamManager Instance {
@@ -22,12 +21,24 @@ class SteamManager : MonoBehaviour {
 		}
 	}
 
-	private static bool s_EverInialized;
-
 	private bool m_bInitialized;
 	public static bool Initialized {
 		get {
 			return Instance.m_bInitialized;
+		}
+	}
+
+	private SteamStatsAndAchievements m_StatsAndAchievements;
+	public static SteamStatsAndAchievements StatsAndAchievements {
+		get {
+			return Instance.m_StatsAndAchievements;
+		}
+	}
+
+	private SteamLeaderboards m_Leaderboards;
+	public static SteamLeaderboards Leaderboards {
+		get {
+			return Instance.m_Leaderboards;
 		}
 	}
 
@@ -44,21 +55,11 @@ class SteamManager : MonoBehaviour {
 		}
 		s_instance = this;
 
-		if(s_EverInialized) {
-			// This is almost always an error.
-			// The most common case where this happens is the SteamManager getting desstroyed via Application.Quit() and having some code in some OnDestroy which gets called afterwards, creating a new SteamManager.
-			throw new System.Exception("Tried to Initialize the SteamAPI twice in one session!");
-		}
-
 		// We want our SteamManager Instance to persist across scenes.
 		DontDestroyOnLoad(gameObject);
 
 		if (!Packsize.Test()) {
 			Debug.LogError("[Steamworks.NET] Packsize Test returned false, the wrong version of Steamworks.NET is being run in this platform.", this);
-		}
-
-		if (!DllCheck.Test()) {
-			Debug.LogError("[Steamworks.NET] DllCheck Test returned false, One or more of the Steamworks binaries seems to be the wrong version.", this);
 		}
 
 		try {
@@ -80,13 +81,13 @@ class SteamManager : MonoBehaviour {
 			return;
 		}
 
+		m_StatsAndAchievements = gameObject.AddComponent<SteamStatsAndAchievements>();
+		m_Leaderboards = gameObject.AddComponent<SteamLeaderboards>();
+
 		// Initialize the SteamAPI, if Init() returns false this can happen for many reasons.
 		// Some examples include:
 		// Steam Client is not running.
 		// Launching from outside of steam without a steam_appid.txt file in place.
-		// Running under a different OS User or Access level (for example running "as administrator")
-		// Valve's documentation for this is located here:
-		// https://partner.steamgames.com/documentation/getting_started
 		// https://partner.steamgames.com/documentation/example // Under: Common Build Problems
 		// https://partner.steamgames.com/documentation/bootstrap_stats // At the very bottom
 
@@ -98,8 +99,6 @@ class SteamManager : MonoBehaviour {
 
 			return;
 		}
-
-		s_EverInialized = true;
 	}
 
 	// This should only ever get called on first load and after an Assembly reload, You should never Disable the Steamworks Manager yourself.
@@ -118,6 +117,9 @@ class SteamManager : MonoBehaviour {
 			m_SteamAPIWarningMessageHook = new SteamAPIWarningMessageHook_t(SteamAPIDebugTextHook);
 			SteamClient.SetWarningMessageHook(m_SteamAPIWarningMessageHook);
 		}
+
+		m_StatsAndAchievements.Init();
+		m_Leaderboards.Init();
 	}
 
 
