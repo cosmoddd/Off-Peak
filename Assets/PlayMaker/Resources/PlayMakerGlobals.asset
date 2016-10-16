@@ -30,7 +30,7 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 0
+      value: 0.502956
     - useVariable: 1
       name: Text Alpha Marcus
       tooltip: 
@@ -48,7 +48,7 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 0
+      value: 1
     - useVariable: 1
       name: Text Alpha Reprinters
       tooltip: 
@@ -90,7 +90,7 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 1
+      value: 0
     - useVariable: 1
       name: Volume_2
       tooltip: 
@@ -222,7 +222,7 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 0
+      value: 1
     - useVariable: 1
       name: ticket display wait time
       tooltip: 
@@ -242,6 +242,12 @@ MonoBehaviour:
       networkSync: 0
       value: 0
     intVariables:
+    - useVariable: 1
+      name: Dialog Counter Overall
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
     - useVariable: 1
       name: PIzza Slices
       tooltip: 
@@ -331,13 +337,13 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 0
+      value: 1
     - useVariable: 1
       name: ticket_pieces
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 0
+      value: 8
     boolVariables:
     - useVariable: 1
       name: opening dialog
@@ -490,3 +496,4 @@ MonoBehaviour:
   - check ticket count
   - to ending
   - ticket acquired
+  - dialog counter

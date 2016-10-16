@@ -47,16 +47,20 @@ Material:
       data:
         first:
           name: _Shininess
-        second: .178353682
+        second: 0.17835368
       data:
         first:
           name: _EmissionLM
         second: 3
+      data:
+        first:
+          name: _Emission
+        second: 1
     m_Colors:
       data:
         first:
           name: _Color
-        second: {r: .917910457, g: .917910457, b: .917910457, a: 1}
+        second: {r: 0.91791046, g: 0.91791046, b: 0.91791046, a: 1}
       data:
         first:
           name: _SpecColor
@@ -64,4 +68,4 @@ Material:
       data:
         first:
           name: _ReflectColor
-        second: {r: 1, g: 1, b: 1, a: .5}
+        second: {r: 1, g: 1, b: 1, a: 0.5}
