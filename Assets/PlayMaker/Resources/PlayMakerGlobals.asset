@@ -30,7 +30,7 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 0.502956
+      value: 0
     - useVariable: 1
       name: Text Alpha Marcus
       tooltip: 
@@ -120,7 +120,7 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 0.63
+      value: 0.73
     - useVariable: 1
       name: announcer_volume
       tooltip: 
@@ -343,7 +343,7 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 8
+      value: 0
     boolVariables:
     - useVariable: 1
       name: opening dialog
