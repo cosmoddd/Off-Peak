@@ -13,7 +13,7 @@ PlayerSettings:
   productName: Off-Peak
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  m_ShowUnitySplashScreen: 1
+  m_ShowUnitySplashScreen: 0
   m_VirtualRealitySplashScreen: {fileID: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
@@ -168,7 +168,7 @@ PlayerSettings:
     height: 180
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
-  resolutionDialogBanner: {fileID: 2800000, guid: b74e94c3ab7944123a5cc83b6fc54642,
+  resolutionDialogBanner: {fileID: 2800000, guid: 548ace4ba246d734d946ecae14a7b6f4,
     type: 3}
   m_BuildTargetIcons:
   - m_BuildTarget: 

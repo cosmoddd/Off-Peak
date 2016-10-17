@@ -30,7 +30,7 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 0
+      value: 1
     - useVariable: 1
       name: Text Alpha Marcus
       tooltip: 
@@ -72,7 +72,7 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 0
+      value: 1
     - useVariable: 1
       name: Text Alpha Zerbs
       tooltip: 
@@ -192,13 +192,13 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 0
+      value: -2000
     - useVariable: 1
       name: run_add
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 5.5
+      value: 7
     - useVariable: 1
       name: subway_HPF
       tooltip: 
@@ -313,7 +313,7 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: -50
+      value: -2000
     - useVariable: 1
       name: sheet music
       tooltip: 
@@ -337,13 +337,13 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 1
+      value: 0
     - useVariable: 1
       name: ticket_pieces
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 0
+      value: 8
     boolVariables:
     - useVariable: 1
       name: opening dialog
@@ -356,13 +356,13 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 0
+      value: 1
     - useVariable: 1
       name: stole
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 0
+      value: 1
     - useVariable: 1
       name: ticketLandingBool
       tooltip: 
@@ -374,13 +374,13 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 0
+      value: 1
     - useVariable: 1
       name: ticketSerbsBarBool
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 0
+      value: 1
     - useVariable: 1
       name: ticketSubwayBool
       tooltip: 
@@ -411,7 +411,7 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: ' '
+      value: push
     - useVariable: 1
       name: mouse sensitivity
       tooltip: 
