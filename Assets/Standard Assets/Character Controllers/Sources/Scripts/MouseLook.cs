@@ -28,6 +28,8 @@ public class MouseLook : MonoBehaviour {
 	public float minimumY = -60F;
 	public float maximumY = 60F;
 
+    public float inverted = -1;
+
 	float rotationY = 0F;
 
 	void Update ()
@@ -50,7 +52,7 @@ public class MouseLook : MonoBehaviour {
 			rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
 			rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
 			
-			transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
+			transform.localEulerAngles = new Vector3((rotationY * inverted), transform.localEulerAngles.y, 0);
 		}
 	}
 	
@@ -60,4 +62,16 @@ public class MouseLook : MonoBehaviour {
 		if (GetComponent<Rigidbody>())
 			GetComponent<Rigidbody>().freezeRotation = true;
 	}
+
+public void Invert()
+{
+    inverted = 1f;
+}
+
+    public void UnInvert()
+    {
+        inverted = -1f;
+    }
+
+
 }
