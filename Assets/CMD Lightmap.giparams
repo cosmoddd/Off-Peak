@@ -7,10 +7,10 @@ LightmapParameters:
   m_PrefabInternal: {fileID: 0}
   m_Name: CMD Lightmap
   serializedVersion: 3
-  resolution: 0.2
-  clusterResolution: 0.29
-  irradianceBudget: 90
-  irradianceQuality: 4096
+  resolution: 0.05
+  clusterResolution: 0.168
+  irradianceBudget: 68
+  irradianceQuality: 2048
   backFaceTolerance: 0.72
   isTransparent: 0
   modellingTolerance: 0.01
