@@ -5,6 +5,8 @@ using UnityEngine;
 namespace HutongGames.PlayMaker.Actions
 {
 	[ActionCategory(ActionCategory.Audio)]
+    [ActionTarget(typeof(AudioSource), "gameObject")]
+    [ActionTarget(typeof(AudioClip), "oneShotClip")]
 	[Tooltip("Plays the Audio Clip set with Set Audio Clip or in the Audio Source inspector on a Game Object. Optionally plays a one shot Audio Clip.")]
 	public class AudioPlay : FsmStateAction
 	{
@@ -20,8 +22,11 @@ namespace HutongGames.PlayMaker.Actions
 		[ObjectType(typeof(AudioClip))]
 		[Tooltip("Optionally play a 'one shot' AudioClip. NOTE: Volume cannot be adjusted while playing a 'one shot' AudioClip.")]
 		public FsmObject oneShotClip;
-		
-		[Tooltip("Event to send when the AudioClip finishes playing.")]
+
+        [Tooltip("Wait until the end of the clip to send the Finish Event. Set to false to send the finish event immediately.")]
+        public FsmBool WaitForEndOfClip;
+
+        [Tooltip("Event to send when the action finishes.")]
 		public FsmEvent finishedEvent;
 
 		private AudioSource audio;
@@ -32,7 +37,8 @@ namespace HutongGames.PlayMaker.Actions
 			volume = 1f;
 			oneShotClip = null;
 		    finishedEvent = null;
-		}
+            WaitForEndOfClip = true;
+        }
 
 		public override void OnEnter()
 		{
@@ -66,8 +72,13 @@ namespace HutongGames.PlayMaker.Actions
 					{
 						audio.PlayOneShot(audioClip);
 					}
-						
-					return;
+                    if (WaitForEndOfClip.Value == false)
+                    {
+                        Fsm.Event(finishedEvent);
+                        Finish();
+                    }
+
+                    return;
 				}
 			}
 			
@@ -95,5 +106,17 @@ namespace HutongGames.PlayMaker.Actions
 				}
 			}
 		}
+
+#if UNITY_EDITOR
+	    public override string AutoName()
+	    {
+	        if (oneShotClip.Value != null && !oneShotClip.IsNone)
+	        {
+	            return ActionHelpers.AutoName(this, oneShotClip);
+	        }
+
+	        return null;
+	    }
+#endif
 	}
 }

@@ -1,113 +1,103 @@
-﻿// (c) Copyright HutongGames, LLC 2010-2013. All rights reserved.
+﻿//-----------------------------------------------------------------------
+// <copyright file="PlayMakerGlobalsInspector.cs" company="Hutong Games LLC">
+// Copyright (c) Hutong Games LLC. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
 
 using System.Collections.Generic;
+using HutongGames.PlayMaker;
 using UnityEditor;
 using UnityEngine;
-using HutongGames.PlayMakerEditor;
 
-[CustomEditor(typeof(PlayMakerGlobals))]
-class PlayMakerGlobalsInspector : Editor
+namespace HutongGames.PlayMakerEditor
 {
-	private PlayMakerGlobals globals;
-	private bool refresh;
+    [CustomEditor(typeof(PlayMakerGlobals))]
+    internal class PlayMakerGlobalsInspector : UnityEditor.Editor
+    {
+	    private PlayMakerGlobals globals;
+	    private List<FsmVariable> variableList;
 
-	private List<FsmVariable> variableList;
+        public void OnEnable()
+	    {
+		    globals = target as PlayMakerGlobals;
+		    BuildVariableList();
+	    }
 
-#if UNITY_3_4
-	private GUIStyle warningBox;
-#endif
+	    public override void OnInspectorGUI()
+	    {
+            FsmEditorStyles.Init();
 
-	void OnEnable()
-	{
-		//Debug.Log("PlayMakerGlobalsInspector: OnEnable");
+            DoGlobalVariablesGUI();
+	        DoGlobalEventsGUI();
 
-		globals = target as PlayMakerGlobals;
+	        GUILayout.Space(5);
 
-		BuildVariableList();
-	}
+	        if (GUILayout.Button("Refresh"))
+	            Refresh();
 
-	public override void OnInspectorGUI()
-	{
-#if UNITY_3_4
-		if (warningBox == null)
-		{
-			warningBox = new GUIStyle(EditorStyles.boldLabel) {wordWrap = true};
-        }
+            GUILayout.Space(10);
 
-        GUILayout.Label(Strings.Hint_GlobalsInspector_Shows_DEFAULT_Values, warningBox);
-#else
-        EditorGUILayout.HelpBox(Strings.Hint_GlobalsInspector_Shows_DEFAULT_Values, MessageType.Info);
-#endif
-	
-		if (refresh)
-		{
-			Refresh();
-			return;
-		}
+            DoImportExportGUI();
+	    }
 
-		GUILayout.Label(Strings.Command_Global_Variables, EditorStyles.boldLabel);
-
-		if (variableList.Count > 0)
-		{
-			foreach (var fsmVariable in variableList)
-			{
-				var tooltip = fsmVariable.Name;
-
-				if (!string.IsNullOrEmpty(fsmVariable.Tooltip))
-				{
-					tooltip += "\n" + fsmVariable.Tooltip;
-				}
-
-				fsmVariable.DoValueGUI(new GUIContent(fsmVariable.Name, tooltip), true);
-			}
-		}
-		else
-		{
-			GUILayout.Label(Strings.Label_None_In_Table);
-		}
-
-		GUILayout.Label(Strings.Label_Global_Events, EditorStyles.boldLabel);
-
-		if (globals.Events.Count > 0)
-		{
-			foreach (var eventName in globals.Events)
-			{
-				GUILayout.Label(eventName);
-			}
-		}
-		else
-		{
-			GUILayout.Label(Strings.Label_None_In_Table);
-		}
-
-        GUILayout.Space(5);
-
-        if (GUILayout.Button(Strings.Command_Export_Globals))
+        private void DoGlobalVariablesGUI()
         {
-            FsmEditorUtility.ExportGlobals();
+            EditorGUILayout.HelpBox(Strings.Hint_GlobalsInspector_Shows_DEFAULT_Values, MessageType.Info);
+
+            GUILayout.Label(Strings.Command_Global_Variables, EditorStyles.boldLabel);
+
+            if (variableList.Count > 0)
+            {
+                FsmVariable.DoVariableListGUI(variableList);
+            }
+            else
+            {
+                GUILayout.Label(Strings.Label_None_In_Table);
+            }
         }
 
-        if (GUILayout.Button(Strings.Command_Import_Globals))
+        private void DoGlobalEventsGUI()
         {
-            FsmEditorUtility.ImportGlobals();
+            GUILayout.Label(Strings.Label_Global_Events, EditorStyles.boldLabel);
+
+            if (globals.Events.Count > 0)
+            {
+                foreach (var eventName in globals.Events)
+                {
+                    GUILayout.Label(eventName);
+                }
+            }
+            else
+            {
+                GUILayout.Label(Strings.Label_None_In_Table);
+            }
         }
-#if UNITY_3_4
-        GUILayout.Label(Strings.Hint_Export_Globals_Notes, warningBox);
-#else
-        EditorGUILayout.HelpBox(Strings.Hint_Export_Globals_Notes, MessageType.None);
-#endif
-	}
 
-	void Refresh()
-	{
-		refresh = false;
-		BuildVariableList();
-		Repaint();
-	}
+        private static void DoImportExportGUI()
+        {
+            if (GUILayout.Button(Strings.Command_Export_Globals))
+            {
+                GlobalsAsset.Export();
+            }
 
-	void BuildVariableList()
-	{
-		variableList = FsmVariable.GetFsmVariableList(globals.Variables, globals);
-		variableList.Sort();
-	}
+            if (GUILayout.Button(Strings.Command_Import_Globals))
+            {
+                GlobalsAsset.Import();
+            }
+
+            EditorGUILayout.HelpBox(Strings.Hint_Export_Globals_Notes, MessageType.None);
+        }
+
+        private void Refresh()
+	    {
+		    BuildVariableList();
+		    Repaint();
+	    }
+
+        private void BuildVariableList()
+	    {
+		    variableList = FsmVariable.GetFsmVariableList(globals);
+	    }
+    }
 }
+

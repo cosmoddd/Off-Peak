@@ -39,6 +39,8 @@ thumbs.db
 .ds_store
 .workspace.mel
 .mayaswatches
+.dll
+.mdb
 
 Version notes:
 1.0.1 
@@ -77,5 +79,83 @@ Version notes:
 -Made sure it compiles on Windows Store builds
 
 1.3.3
--Fixed issue when user have own editor script called PlayerSettings
--Ready for Unity 5x
+-Unity5 ready
+-Fixed issue when user have own editor script named PlayerSettings
+
+1.3.4
+-Fixed issue when user have own script named Environment
+-Fixed issue when user have own script named EditorUtils
+
+1.3.5
+-Fixed issue with Unity changing build log format in 5.2.1
+
+1.3.6
+-Added select/deselect all functionality for types
+-Cleanup/Refactor
+-Added foldout for assemblies
+-The "Delete Folder" confirmation window now states which folder it will delete
+
+2.0.0
+-Improvements to UI
+-New feature: All deleted assets can now be automatically backed up in an unitypackage
+-New feature: Added manual "Delete empty folders" functionality
+-New feature: Added direct link to build settings
+-New feature: Asset Hunter settings now allows to exclude assets by path substring
+-New feature: Asset "AssetHunterSceneOverview" which allows you to locate enabled/disabled and unreferenced scenes
+-New feature: All used asset have their filesize listed
+-New feature: All folders with used asset have their local and total filesize listed
+-Made sure a new settings file is generated if none exist
+-Added window pane titlecontent
+-Improved base empty folder deletetion to ignore the following filetypes:
+	".meta" 
+	"thumbs.db"
+	".orig"
+	".ds_store"
+	".workspace.mel"
+	".mayaswatches"
+
+2.1.0
+-Modified the warnings for irregular assets in build log
+-Greatly improved performance when reading log
+-Added option for forced memory cleanup in settings
+
+2.1.1
+-Reinstated per-folder OutOfMemory safeguard to fix rare Unity crash
+
+2.1.2
+-Fixed issue with case-sensitive string comparison
+
+2.1.3
+-Changed "delete all" description
+
+2.1.4
+- New namespace
+- Refactoring
+- Fixed 2017 Beta compile issue
+
+2.1.5
+- Fixed issue with missing functionality if build created had no asset dependencies
+- Renamed script files (Might need to delete old version manually)
+
+2.1.6
+- Optimized comparisons
+- Now ignores *.dll and *.mdb files
+
+2.1.7
+- Improved representation of file sizes. No longer using buildlog directly
+- Minor performance optimizations
+
+2.2
+- Started rework of the API
+- Now you can exclude folders, types and assets directly from code
+- example: HeurekaGames.AssetHunter.AssetHunterSettings.ExcludeIndividualAssetWithID(string id)
+
+2.3
+- Fixed issue with Profiling namespace in Unity 5.5.0f3
+
+2.4
+- Fixed a faulty way of calculating size of used assets. Now using the correct imported size
+
+2.5
+- Added info for user while processing
+- Made sure settings file is path agnostic

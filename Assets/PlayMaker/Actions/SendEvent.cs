@@ -1,10 +1,13 @@
 // (c) Copyright HutongGames, LLC 2010-2013. All rights reserved.
 
 using System;
+using UnityEngine;
 
 namespace HutongGames.PlayMaker.Actions
 {
 	[ActionCategory(ActionCategory.StateMachine)]
+    [ActionTarget(typeof(PlayMakerFSM), "eventTarget")]
+    [ActionTarget(typeof(GameObject), "eventTarget")]
 	[Tooltip("Sends an Event after an optional delay. NOTE: To send events between FSMs they must be marked as Global in the Events Browser.")]
 	public class SendEvent : FsmStateAction
 	{
@@ -19,7 +22,7 @@ namespace HutongGames.PlayMaker.Actions
 		[Tooltip("Optional delay in seconds.")]
 		public FsmFloat delay;
 
-		[Tooltip("Repeat every frame. Rarely needed.")]
+		[Tooltip("Repeat every frame. Rarely needed, but can be useful when sending events to other FSMs.")]
 		public bool everyFrame;
 
 		private DelayedEvent delayedEvent;
@@ -37,7 +40,10 @@ namespace HutongGames.PlayMaker.Actions
 			if (delay.Value < 0.001f)
 			{
 				Fsm.Event(eventTarget, sendEvent);
-				Finish();
+			    if (!everyFrame)
+			    {
+			        Finish();
+			    }
 			}
 			else
 			{
@@ -54,6 +60,27 @@ namespace HutongGames.PlayMaker.Actions
 					Finish();
 				}
 			}
+			else
+			{
+                Fsm.Event(eventTarget, sendEvent);
+			}
 		}
+
+#if UNITY_EDITOR
+
+	    public override string AutoName()
+	    {
+	        return "SendEvent : " + (eventTarget.target != FsmEventTarget.EventTarget.Self ? " " + eventTarget.target + " ": "")
+	                              + (sendEvent != null ? sendEvent.Name : "None")
+	                              + (delay.Value > 0f ? " " + delay.Value + "s" : "");
+	    }
+
+	    public override float GetProgress()
+	    {
+            if (delayedEvent != null)
+	            return Mathf.Min(delayedEvent.GetProgress());
+	        return 0f;
+	    }
+#endif
 	}
 }

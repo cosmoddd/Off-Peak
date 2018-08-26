@@ -6,11 +6,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+#if UNITY_5_5_OR_NEWER
+using UnityEngine.Profiling;
+#endif
 
-namespace HeurekaGames
+namespace HeurekaGames.AssetHunter
 {
     [System.Serializable]
-    public class AssetBuildReport
+    public class AssetHunterBuildReport
     {
         [SerializeField]
         private List<string> m_includedDependencies = new List<string>();
@@ -24,7 +27,7 @@ namespace HeurekaGames
 
         internal bool IsEmpty()
         {
-            return m_BuildSizeList.Count == 0;
+            return m_BuildSizeList.Count == 0 && m_includedDependencies.Count == 0;
         }
 
         public List<string> IncludedDependencies
@@ -67,7 +70,8 @@ namespace HeurekaGames
                     BuildReportAsset newAsset = new BuildReportAsset();
 
                     newAsset.SetAssetInfo(obj, path);
-                    newAsset.SetSize(0.0f, "--");
+
+                    //newAsset.SetSize(0.0f, "--");
                     m_BuildSizeList.Add(newAsset);
                 }
                 else
@@ -85,9 +89,13 @@ namespace HeurekaGames
             int countTo = Enum.GetValues(typeof(BuildTargetGroup)).Length;
 
             //TODO Get all the different splash screens and config files somehow
-            List<UnityEngine.Object> splash = new List<UnityEngine.Object>();    
-            splash.Add(UnityEditor.PlayerSettings.xboxSplashScreen);
+            List<UnityEngine.Object> splash = new List<UnityEngine.Object>();
 
+#if UNITY_5_5_OR_NEWER
+            //Dont add splashscreen in this version
+#else
+    splash.Add(UnityEditor.PlayerSettings.xboxSplashScreen);
+#endif
             //Loop the entries
             foreach (UnityEngine.Object obj in splash)
             {
@@ -98,38 +106,12 @@ namespace HeurekaGames
                 BuildReportAsset newAsset = new BuildReportAsset();
 
                 newAsset.SetAssetInfo(obj, AssetDatabase.GetAssetPath(obj));
-                newAsset.SetSize(0.0f, "--");
+                //newAsset.SetSize(0.0f, "--");
                 m_BuildSizeList.Add(newAsset);
             }
 
-            //TODO And the icons from METRO as well
-
-#if !UNITY_5
-            List<string> targetResourcePaths = new List<string>();
-            targetResourcePaths.Add(UnityEditor.PlayerSettings.Metro.certificatePath);
-            targetResourcePaths.AddRange(getWin8AssetPaths());
-
-            //Loop the paths
-            foreach (string path in targetResourcePaths)
-            {
-                //Early out if it already exist
-                if (string.IsNullOrEmpty(path) || m_BuildSizeList.Exists(val => val.Path == path))
-                    continue;
-
-                UnityEngine.Object obj = AssetDatabase.LoadAssetAtPath(path, typeof(UnityEngine.Object));
-
-                if (obj != null)
-                {
-                    BuildReportAsset newAsset = new BuildReportAsset();
-                    newAsset.SetAssetInfo(AssetDatabase.LoadAssetAtPath(path, typeof(UnityEngine.Object)), path);
-                    newAsset.SetSize(0.0f, "--");
-                    m_BuildSizeList.Add(newAsset);
-                }
-            }
-#endif
-
             //Loop icons in buildtargetgroups
-            foreach (BuildTargetGroup btg in (BuildTargetGroup[]) Enum.GetValues(typeof(BuildTargetGroup)))
+            foreach (BuildTargetGroup btg in (BuildTargetGroup[])Enum.GetValues(typeof(BuildTargetGroup)))
             {
                 EditorUtility.DisplayProgressBar(
                                 "Add Target Specifics for " + btg.ToString(),
@@ -139,7 +121,7 @@ namespace HeurekaGames
                 Texture2D[] buildTargetGroupTextures = UnityEditor.PlayerSettings.GetIconsForTargetGroup(btg);
 
                 foreach (Texture2D curIcon in buildTargetGroupTextures)
-                { 
+                {
                     //Early out if it already exist
                     if (curIcon == null || m_BuildSizeList.Exists(val => val.Path == AssetDatabase.GetAssetPath(curIcon)))
                         continue;
@@ -147,7 +129,7 @@ namespace HeurekaGames
                     BuildReportAsset newAsset = new BuildReportAsset();
 
                     newAsset.SetAssetInfo(curIcon, AssetDatabase.GetAssetPath(curIcon));
-                    newAsset.SetSize(0.0f, "--");
+                    //newAsset.SetSize(0.0f, "--");
                     m_BuildSizeList.Add(newAsset);
                 }
                 AssetHunterHelper.UnloadUnused();
@@ -156,52 +138,10 @@ namespace HeurekaGames
             EditorUtility.ClearProgressBar();
         }
 
-#if !UNITY_5
-        //Run through win8 assets to get icons etc, getting paths through reflection
-        private List<string> getWin8AssetPaths()
+        internal void SortUsed()
         {
-
-            List<String> reflectedPaths = new List<string>();
-
-            PropertyInfo[] properties = typeof(UnityEditor.PlayerSettings.Metro).GetProperties(BindingFlags.Public | BindingFlags.Static);
-
-            //From UnityEditor.PlayerSettings.Metro I get these property names
-            string[] validProperties = new string[5]
-                {
-                    "tile",
-                    "splash",
-                    "logo",
-                    "icon",
-                    "certificatePath"
-                };
-
-            //TODO, run through these and find the ones with paths to icons etc
-            foreach (PropertyInfo p in properties)
-            {
-                // Only work with strings
-                if (p.PropertyType != typeof(string)) { continue; }
-
-                // If not writable then cannot null it; if not readable then cannot check it's value
-                if (!p.CanRead) { continue; }
-
-                //See if the property name is similar to the predefined properties found in UnityEditor.PlayerSettings.Metro
-                if (validProperties.Any(s => p.ToString().ToLowerInvariant().Contains(s))) continue;
-                    
-                MethodInfo mget = p.GetGetMethod(false);
-                MethodInfo mset = p.GetSetMethod(false);
-
-                // Get and set methods have to be public
-                if (mget == null) { continue; }
-                if (mset == null) { continue; }
-
-                string path = p.GetValue(properties, null).ToString();
-
-                reflectedPaths.Add(path);                
-            }
-
-            return reflectedPaths;
+            m_BuildSizeList.Sort((a, b) => b.FileSize.CompareTo(a.FileSize));
         }
-#endif
     }
 
 
@@ -215,43 +155,110 @@ namespace HeurekaGames
         [SerializeField]
         private string m_assetGUID;
         [SerializeField]
-        private SerializableSystemType m_type;
+        private AssetHunterSerializableSystemType m_type;
         [SerializeField]
-        private float m_assetSize;
+        private long m_assetActualSize;
         [SerializeField]
-        private string m_sizePostFix;
+        private string m_assetSizeString;
         [SerializeField]
         private bool m_bShowSceneDependency;
         [SerializeField]
-        private UnityEngine.Object[] m_sceneDependencies;
+        private string[] m_sceneDependenciesGUID;
         [SerializeField]
         private bool m_bFoldOut;
 
+        static readonly string[] SizeSuffixes =
+          { "bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB" };
+
         internal void SetAssetInfo(UnityEngine.Object obj, string path)
         {
+            long fileSize = -1;
+
+            fileSize = getImportedFileSize(path);
+
+            m_assetActualSize = fileSize;
+            //SetSize();
+            m_assetSizeString = (m_assetActualSize != -1) ? SizeSuffix(m_assetActualSize, 1) : "NA";
+
             this.m_path = path;
-            string[] parts = path.Split('/');
-            this.m_name = parts[parts.Length - 1];
+            //string[] parts = path.Split('/');
+            this.m_name = obj.name;// parts[parts.Length - 1];
 
             m_assetGUID = UnityEditor.AssetDatabase.AssetPathToGUID(path);
-            m_type = new SerializableSystemType(obj.GetType());
+            m_type = new AssetHunterSerializableSystemType(obj.GetType());
 
-            AssetHunterHelper.UnloadUnused();     
+            AssetHunterHelper.UnloadUnused();
         }
 
-
-        internal void SetSize(float assetSize, string postFix)
+        private long getImportedFileSize(string path)
         {
-            m_assetSize = assetSize;
-            m_sizePostFix = postFix;
+            if (!string.IsNullOrEmpty(path))
+            {
+                string guid = AssetDatabase.AssetPathToGUID(path);
+                if (guid.Length < 2)
+                {
+                    //Debug.Log(assetPath + " has no guid? value is \"" + guid + "\"");
+                    return -1;
+                }
+
+                string assetImportedPath = System.IO.Path.GetFullPath(Application.dataPath + "../../Library/cache/" + guid.Substring(0, 2) + "/" + guid);
+
+                if (File.Exists(assetImportedPath))
+                {
+                    return getActualFileSize(assetImportedPath);
+                }
+                else
+                {
+                    assetImportedPath = System.IO.Path.GetFullPath(Application.dataPath + "../../Library/metadata/" + guid.Substring(0, 2) + "/" + guid);
+                    string addedResourcePath = System.IO.Path.GetFullPath(Application.dataPath + "../../Library/metadata/" + guid.Substring(0, 2) + "/" + guid + ".resource");
+
+                    //The additional resource file (i.e. audioclips have a file + a resource file)
+                    long resourceSize = File.Exists(assetImportedPath) ? getActualFileSize(addedResourcePath) : 0;
+
+                    if (File.Exists(assetImportedPath))
+                    {
+                        return getActualFileSize(assetImportedPath) + resourceSize;
+                    }
+                }
+            }
+
+            //Fallback return -1;
+            return -1;
+        }
+
+        private long getActualFileSize(string assetImportedPath)
+        {
+
+            if (string.IsNullOrEmpty(assetImportedPath) || !File.Exists(assetImportedPath))
+            {
+                return 0;
+            }
+
+            FileInfo fi = new FileInfo(assetImportedPath);
+            return fi.Length;
+        }
+
+        static string SizeSuffix(Int64 value, int decimalPlaces = 1)
+        {
+            if (value < 0) { return "-" + SizeSuffix(-value); }
+
+            int i = 0;
+            decimal dValue = (decimal)value;
+            while (Math.Round(dValue, decimalPlaces) >= 1000)
+            {
+                dValue /= 1024;
+                i++;
+            }
+
+            return string.Format("{0:n" + decimalPlaces + "} {1}", dValue, SizeSuffixes[i]);
         }
 
         public bool Equals(BuildReportAsset other)
         {
-            if (other!=null)
-            return this.m_assetGUID == other.m_assetGUID &&
+            if (other != null)
+                return this.m_assetGUID == other.m_assetGUID;/* &&
                    this.m_name == other.m_name &&
-                   this.m_path == other.m_path;
+                   this.m_path == other.m_path;*/
 
             Debug.LogWarning("Something when wrong in parsing, compare object is null");
             return false;
@@ -263,7 +270,7 @@ namespace HeurekaGames
             set { m_name = value; }
         }
 
-        public SerializableSystemType Type
+        public AssetHunterSerializableSystemType Type
         {
             get { return m_type; }
         }
@@ -278,15 +285,16 @@ namespace HeurekaGames
             get { return m_path; }
         }
 
-        public float Size
+        public long FileSize
         {
-            get { return m_assetSize; }
+            get { return m_assetActualSize; }
         }
 
-        public string SizePostFix
+        public string SizeString
         {
-            get { return m_sizePostFix; }
+            get { return m_assetSizeString; }
         }
+
 
         internal void ToggleShowSceneDependency()
         {
@@ -294,12 +302,19 @@ namespace HeurekaGames
             m_bFoldOut = m_bShowSceneDependency;
 
             if (m_bShowSceneDependency == false)
-                m_sceneDependencies = null;
+                m_sceneDependenciesGUID = null;
         }
 
         internal void SetSceneDependencies(UnityEngine.Object[] scenes)
         {
-            m_sceneDependencies = scenes;
+            string[] sceneGuids = new string[scenes.Length];
+
+            for (int i = 0; i < scenes.Length; i++)
+            {
+                sceneGuids[i] = AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(scenes[i]));
+            }
+
+            m_sceneDependenciesGUID = sceneGuids;
         }
 
         public bool ShouldShowDependencies
@@ -313,9 +328,9 @@ namespace HeurekaGames
             set { m_bFoldOut = value; }
         }
 
-        internal UnityEngine.Object[] GetSceneDependencies()
+        internal string[] GetSceneDependencies()
         {
-            return m_sceneDependencies;
+            return m_sceneDependenciesGUID;
         }
     }
 }

@@ -5,8 +5,8 @@ using UnityEngine;
 namespace HutongGames.PlayMaker.Actions
 {
 	[ActionCategory(ActionCategory.Animation)]
-	[Tooltip("Sets the Speed of an Animation. Check Every Frame to update the animation time continuosly, e.g., if you're manipulating a variable that controls animation speed.")]
-	public class SetAnimationSpeed : ComponentAction<Animation>
+	[Tooltip("Sets the Speed of an Animation. Check Every Frame to update the animation time continuously, e.g., if you're manipulating a variable that controls animation speed.")]
+	public class SetAnimationSpeed : BaseAnimationAction
 	{
 		[RequiredField]
 		[CheckForComponent(typeof(Animation))]
@@ -38,7 +38,7 @@ namespace HutongGames.PlayMaker.Actions
 			DoSetAnimationSpeed(gameObject.OwnerOption == OwnerDefaultOption.UseOwner ? Owner : gameObject.GameObject.Value);
 		}
 
-		void DoSetAnimationSpeed(GameObject go)
+	    private void DoSetAnimationSpeed(GameObject go)
 		{
 		    if (!UpdateCache(go))
 		    {

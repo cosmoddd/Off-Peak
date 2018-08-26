@@ -217,11 +217,11 @@ public class SECTR_PortalEditor : SECTR_HullEditor
 	void _PickSector(SECTR_Portal myPortal)
 	{
 		HandleUtility.AddDefaultControl(GUIUtility.GetControlID(FocusType.Passive));
-		if(Event.current.type == EventType.mouseMove)
+		if(Event.current.type == EventType.MouseMove)
 		{
 			_ComputeCursorVert();
 		}
-		else if(Event.current.type == EventType.mouseUp && Event.current.button == 0 && !Event.current.alt && !Event.current.control)
+		else if(Event.current.type == EventType.MouseUp && Event.current.button == 0 && !Event.current.alt && !Event.current.control)
 		{
 			SECTR_Sector sector = _GetSectorFromSelection();
 			if(sector)
@@ -241,7 +241,7 @@ public class SECTR_PortalEditor : SECTR_HullEditor
 				_EndSelection();
 			}
 		}
-		else if(Event.current.type == EventType.keyUp && Event.current.keyCode == KeyCode.Escape)
+		else if(Event.current.type == EventType.KeyUp && Event.current.keyCode == KeyCode.Escape)
 		{
 			pickBack = false;
 			pickFront = false;

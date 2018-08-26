@@ -26,7 +26,7 @@ namespace HutongGames.PlayMaker.Actions
 		public bool everyFrame;
 		
 		// store the game object that we activated on enter
-		// so we can de-activate it on exit.
+		// so we can deactivate it on exit.
 		GameObject activatedGameObject;
 
 		public override void Reset()
@@ -120,6 +120,13 @@ namespace HutongGames.PlayMaker.Actions
                 SetActiveRecursively(child.gameObject, state);
             }
         } 
+#endif
+
+#if UNITY_EDITOR
+        public override string AutoName()
+        {
+            return (activate.Value ? "Activate " : "Deactivate ") + ActionHelpers.GetValueLabel(Fsm, gameObject);
+        }
 #endif
     }
 }

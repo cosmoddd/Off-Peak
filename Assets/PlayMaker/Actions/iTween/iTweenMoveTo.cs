@@ -60,7 +60,7 @@ namespace HutongGames.PlayMaker.Actions
 		public FsmBool reverse;
 			
 		private Vector3[] tempVct3;
-		public override void OnDrawGizmos(){
+		public void OnDrawGizmos(){
 			if(transforms.Length >= 2) {
 				tempVct3 = new Vector3[transforms.Length];
 				for(int i = 0;i<transforms.Length;i++){

@@ -11,9 +11,11 @@ namespace HutongGames.PlayMaker.Actions
 		[RequiredField]
 		[UIHint(UIHint.Variable)]
 		public FsmString stringVariable;
-		[RequiredField]
+
+        [UIHint(UIHint.TextArea)]
 		public FsmString stringValue;
-		public bool everyFrame;
+		
+        public bool everyFrame;
 
 		public override void Reset()
 		{
@@ -42,6 +44,13 @@ namespace HutongGames.PlayMaker.Actions
 			
 			stringVariable.Value = stringValue.Value;
 		}
+
+#if UNITY_EDITOR
+	    public override string AutoName()
+	    {
+	        return ActionHelpers.AutoNameSetVar(this, stringVariable, stringValue);
+	    }
+#endif
 		
 	}
 }

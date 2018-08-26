@@ -1,4 +1,7 @@
-﻿Shader "Hidden/FoggyLight"
+﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Hidden/FoggyLight"
 {
     SubShader
     {
@@ -36,8 +39,8 @@
             PointLightv2f PointLightVert (appdata_full i)
             {
                 PointLightv2f o;
-                o.pos = mul(UNITY_MATRIX_MVP, i.vertex);
-                o.Wpos.xyz = mul((float4x4)_Object2World, float4(i.vertex.xyz, 1)).xyz;
+                o.pos = UnityObjectToClipPos(i.vertex);
+                o.Wpos.xyz = mul((float4x4)unity_ObjectToWorld, float4(i.vertex.xyz, 1)).xyz;
                 float4 ScreenPos = ComputeScreenPos(o.pos);
 				o.ScreenUVs.xy = ScreenPos.xy / ScreenPos.w;
 				o.ScreenUVs.w = ScreenPos.w;

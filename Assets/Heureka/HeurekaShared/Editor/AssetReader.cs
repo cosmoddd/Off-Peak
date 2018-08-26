@@ -5,9 +5,9 @@ using System.Reflection;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace HeurekaGames
+namespace HeurekaGames.AssetHunter
 {
-    public static class AssetReader
+    public static class AssetHunterReader
     {
         public static List<string> GetPrefabsFromSceneFiles(string[] scenes, out Dictionary<string, List<string>> assetSceneDependencies)
         {
@@ -27,7 +27,6 @@ namespace HeurekaGames
                         "Analyzing scenes to get used prefabs",
                         (float)i / (float)(dependencies.Length));
 
-
                     if (!sceneAssetPaths.Contains(dependencies[i]))
                     {
                         if (dependencies[i] != null)
@@ -45,21 +44,6 @@ namespace HeurekaGames
             EditorUtility.ClearProgressBar();
 
             return sceneAssetPaths;
-        }
-
-        public static string[] GetEnabledScenesInBuild()
-        {
-            return (from scene in EditorBuildSettings.scenes where scene.enabled select scene.path).ToArray();
-        }
-
-        public static string[] GetAllScenesInBuild()
-        {
-            return (from scene in EditorBuildSettings.scenes select scene.path).ToArray();
-        }
-
-        public static string[] GetAllScenes()
-        {
-            return (from scene in AssetDatabase.GetAllAssetPaths() where scene.EndsWith(".unity") select scene).ToArray();
         }
     }
 }

@@ -562,7 +562,7 @@ public class AmplifyColorBase : MonoBehaviour
 		Texture2D lut = ( LutTexture == null ) ? normalLut : LutTexture;
 		Texture2D lutBlend = LutBlendTexture;
 
-		int pass = !GetComponent<Camera>().hdr ? 0 : 1;
+		int pass = !GetComponent<Camera>().allowHDR ? 0 : 1;
 		bool blend = ( BlendAmount != 0.0f ) || blending;
 		bool requiresBlend = blend || ( blend && lutBlend != null );
 		bool useBlendCache = requiresBlend;

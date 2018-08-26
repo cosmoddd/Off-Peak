@@ -65,7 +65,7 @@ public abstract class SECTR_HullEditor : SECTR_Editor
 	protected void _EditHull(SECTR_Hull myHull)
 	{
 		HandleUtility.AddDefaultControl(GUIUtility.GetControlID(FocusType.Passive));
-		if(Event.current.type == EventType.mouseMove)
+		if(Event.current.type == EventType.MouseMove)
 		{
 			_ComputeCursorVert();
 			closesetVertIsValid = true;
@@ -90,7 +90,7 @@ public abstract class SECTR_HullEditor : SECTR_Editor
 				}
 			}
 		}
-		else if(Event.current.type == EventType.mouseUp && Event.current.button == 0 && !Event.current.alt && !Event.current.control)
+		else if(Event.current.type == EventType.MouseUp && Event.current.button == 0 && !Event.current.alt && !Event.current.control)
 		{
 			if(closesetVertIsValid)
 			{
@@ -105,7 +105,7 @@ public abstract class SECTR_HullEditor : SECTR_Editor
 				}
 			}
 		}
-		else if(Event.current.type == EventType.keyUp && Event.current.keyCode == KeyCode.Return)
+		else if(Event.current.type == EventType.KeyUp && Event.current.keyCode == KeyCode.Return)
 		{
 			if(newHullVerts.Count >= 3 || (myHull.ForceEditHull && newHullVerts.Count == 0))
 			{
@@ -113,7 +113,7 @@ public abstract class SECTR_HullEditor : SECTR_Editor
 				HandleUtility.Repaint();
 			}
 		}
-		else if(Event.current.type == EventType.keyUp && Event.current.keyCode == KeyCode.Escape)
+		else if(Event.current.type == EventType.KeyUp && Event.current.keyCode == KeyCode.Escape)
 		{
 			_EndNewHull(myHull, true);
 		}

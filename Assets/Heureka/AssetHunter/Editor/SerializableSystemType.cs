@@ -5,10 +5,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace HeurekaGames
+namespace HeurekaGames.AssetHunter
 {
     [System.Serializable]
-    public class SerializableSystemType : IComparer<SerializableSystemType>
+    public class AssetHunterSerializableSystemType : IComparer<AssetHunterSerializableSystemType>
     {
         [SerializeField]
         private string m_Name;
@@ -52,7 +52,7 @@ namespace HeurekaGames
             m_SystemType = System.Type.GetType(m_AssemblyQualifiedName);
         }
 
-        public SerializableSystemType(System.Type _SystemType)
+        public AssetHunterSerializableSystemType(System.Type _SystemType)
         {
             m_SystemType = _SystemType;
             m_Name = _SystemType.Name;
@@ -62,7 +62,7 @@ namespace HeurekaGames
 
         public override bool Equals(System.Object obj)
         {
-            SerializableSystemType temp = obj as SerializableSystemType;
+            AssetHunterSerializableSystemType temp = obj as AssetHunterSerializableSystemType;
             if ((object)temp == null)
             {
                 return false;
@@ -75,12 +75,12 @@ namespace HeurekaGames
             return SystemType.GetHashCode();
         }
 
-        public bool Equals(SerializableSystemType _Object)
+        public bool Equals(AssetHunterSerializableSystemType _Object)
         {
             return _Object.SystemType.Equals(SystemType);
         }
 
-        public static bool operator ==(SerializableSystemType a, SerializableSystemType b)
+        public static bool operator ==(AssetHunterSerializableSystemType a, AssetHunterSerializableSystemType b)
         {
             // If both are null, or both are same instance, return true.
             if (System.Object.ReferenceEquals(a, b))
@@ -97,12 +97,12 @@ namespace HeurekaGames
             return a.Equals(b);
         }
 
-        public static bool operator !=(SerializableSystemType a, SerializableSystemType b)
+        public static bool operator !=(AssetHunterSerializableSystemType a, AssetHunterSerializableSystemType b)
         {
             return !(a == b);
         }
 
-        public int Compare(SerializableSystemType a, SerializableSystemType b)
+        public int Compare(AssetHunterSerializableSystemType a, AssetHunterSerializableSystemType b)
         {
             if (a.SystemType.Name.CompareTo(b.SystemType.Name) != 0)
             {
@@ -115,9 +115,9 @@ namespace HeurekaGames
         }
     }
 
-    public class SerializableSystemTypeComparer : IComparer<SerializableSystemType>
+    public class SerializableSystemTypeComparer : IComparer<AssetHunterSerializableSystemType>
     {
-        public int Compare(SerializableSystemType a, SerializableSystemType b)
+        public int Compare(AssetHunterSerializableSystemType a, AssetHunterSerializableSystemType b)
         {
             if (a.SystemType.Name.CompareTo(b.SystemType.Name) != 0)
             {

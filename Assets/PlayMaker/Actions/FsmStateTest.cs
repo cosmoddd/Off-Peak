@@ -5,6 +5,7 @@ using UnityEngine;
 namespace HutongGames.PlayMaker.Actions
 {
 	[ActionCategory(ActionCategory.Logic)]
+    [ActionTarget(typeof(PlayMakerFSM), "gameObject,fsmName")]
 	[Tooltip("Tests if an FSM is in the specified State.")]
 	public class FsmStateTest : FsmStateAction
 	{
@@ -37,7 +38,7 @@ namespace HutongGames.PlayMaker.Actions
 		// and have to cache a new fsm
 		private GameObject previousGo;
 		
-		// cach the fsm component since that's an expensive operation
+		// cache the fsm component since that's an expensive operation
         private PlayMakerFSM fsm;
 
 		public override void Reset()

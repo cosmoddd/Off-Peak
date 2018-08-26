@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 
-namespace HeurekaGames
+namespace HeurekaGames.AssetHunter
 {
-    public static class Extensions
+    public static class AssetHunterExtensions
     {
         #region Vector3
 
@@ -44,34 +44,9 @@ namespace HeurekaGames
             return System.Text.RegularExpressions.Regex.Replace(camelCaseString, "([a-z](?=[A-Z])|[A-Z](?=[A-Z][a-z]))", "$1 ").Trim();
         }
 
-        #endregion
-
-        #region GameObject
-
-        public static void SetComponentRecursively<T>(this GameObject gameObject, bool tf) where T : Component
+        public static bool Contains(this string source, string toCheck, StringComparison comp)
         {
-            T[] comps = gameObject.GetComponentsInChildren<T>();
-            foreach (T comp in comps)
-            {
-
-                try
-                {
-                    System.Reflection.PropertyInfo pi = (typeof(T)).GetProperty("enabled");
-                    if (null != pi && pi.CanWrite)
-                    {
-                        pi.SetValue(comp, tf, null);
-                    }
-                    else
-                    {
-                        Console.WriteLine("BLABLA");
-                        Debug.Log("Property does not exist, or cannot write");
-                    }
-                }
-                catch (NullReferenceException e)
-                {
-                    Debug.Log("The property does not exist in MyClass." + e.Message);
-                }
-            }
+            return source != null && toCheck != null && source.IndexOf(toCheck, comp) >= 0;
         }
 
         #endregion
