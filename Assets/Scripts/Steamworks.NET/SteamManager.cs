@@ -16,19 +16,6 @@ using Steamworks;
 [DisallowMultipleComponent]
 public class SteamManager : MonoBehaviour {
 
-	private SteamStatsAndAchievements m_StatsAndAchievements;
-	public static SteamStatsAndAchievements StatsAndAchievements {
-		get {
-			return Instance.m_StatsAndAchievements;
-		}
-	}
-
-	private SteamLeaderboards m_Leaderboards;
-	public static SteamLeaderboards Leaderboards {
-		get {
-			return Instance.m_Leaderboards;
-		}
-	}
 
 	
 	private static SteamManager s_instance;
@@ -40,6 +27,20 @@ public class SteamManager : MonoBehaviour {
 			else {
 				return s_instance;
 			}
+		}
+	}
+
+	private SteamStatsAndAchievements m_StatsAndAchievements;
+	public static SteamStatsAndAchievements StatsAndAchievements {
+		get {
+			return Instance.m_StatsAndAchievements;
+		}
+	}
+
+	private SteamLeaderboards m_Leaderboards;
+	public static SteamLeaderboards Leaderboards {
+		get {
+			return Instance.m_Leaderboards;
 		}
 	}
 

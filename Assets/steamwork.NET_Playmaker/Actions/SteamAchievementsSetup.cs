@@ -12,7 +12,8 @@ namespace HutongGames.PlayMaker.Actions
 		[RequiredField]
 		[Tooltip("List of Achievement Ids.")]
 		public FsmString[] AchievementIds;
-		
+	//	public SteamManager steamManager;
+
 		public override void Reset() {
 			AchievementIds = null;
 		}
@@ -20,9 +21,9 @@ namespace HutongGames.PlayMaker.Actions
 		public override void OnEnter() {
 			if (SteamManager.Initialized) {
 				string[] achievementIds = new string[AchievementIds.Length];
-				//Debug.Log(variables.Length);
+				Debug.Log(AchievementIds.Length);
 				for (int i = 0; i < AchievementIds.Length; ++i) {
-					//Debug.Log(variables[i]);
+					Debug.Log(AchievementIds[i]);
 					achievementIds[i] = AchievementIds[i].Value;
 				}
 				SteamManager.StatsAndAchievements.InitAchievements(achievementIds);
