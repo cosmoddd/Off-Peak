@@ -1,0 +1,21 @@
+mtllib ./main facade-detach.All files.mtl
+g main facade-detach
+v 57.83327 -29 -120.789
+v 57.83327 55.68005 -120.789
+v 21.37403 -29 -120.789
+v 21.37403 55.68005 -120.789
+
+vn 0 0 -0.9999999
+vn 0 0 -0.9999999
+vn 0 0 -0.9999999
+vn 0 0 -0.9999999
+
+vt 0 0
+vt 0 84.68005
+vt 36.45924 0
+vt 36.45924 84.68005
+
+usemtl facade metal blueish
+usemap facade metal blueish
+f 2/2/2 1/1/1 3/3/3
+f 4/4/4 2/2/2 3/3/3
